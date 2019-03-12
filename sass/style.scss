@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&subset=latin-ext');
+@import url("https://use.fontawesome.com/releases/v5.7.1/css/all.css");
+@import "bootstrap/scss/bootstrap.scss";
+@import "variables";
+@import "colors";
+@import "buttons";
+@import "forms";
+@import "cards";
+@import "components/components";
+@import "layout/navbars";
+@import "layout/footer";
+
+html, body {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  min-height: 100vh;
+}
+
+$about-us-description-font-size: $font-size-lg;
+$about-us-description-font-weight: 300;
+$about-us-photo-margin: 15px;
+$about-us-photo-wide: 600px;
+$about-us-photo-narrow: 370px;
+.about-us {
+  &__description {
+    font-size: $about-us-description-font-size;
+    font-weight: $about-us-description-font-weight;
+    text-align: center;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__photos {
+  }
+
+  &__single-photo {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__signature {
+    text-align: center;
+  }
+}
+
+$opinion-description-font-size: $font-size-lg;
+$opinion-description-font-weight: 300;
+.offer {
+  &__description {
+    font-size: $opinion-description-font-size;
+    font-weight: $opinion-description-font-weight;
+    text-align: center;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+$faq-active-card-icon-color: $secondary-color-dark;
+$faq-active-card-header-border-color: $secondary-color-dark;
+$faq-card-icon-color: $secondary-color-light;
+$faq-card-header-border-color: $secondary-color-light;
+$faq-card-header-border-width: 2px;
+$faq-space-between: 16px;
+$faq-card-header-icon-margin: 1.2em;
+$faq-card-icon-padding: 72px;
+.faq {
+  .accordion {
+    .card {
+      margin-top: $faq-space-between;
+      border: 0;
+
+      .card-body {
+        text-align: justify;
+      }
+
+      .card-header {
+        position: relative;
+        cursor: pointer;
+        font-weight: normal;
+        border: $faq-card-header-border-width solid $faq-card-header-border-color;
+        margin-bottom: 0;
+        border-radius: 0;
+        padding-left: $faq-card-icon-padding;
+
+        &__icon {
+          position: absolute;
+          text-align: center;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          margin-right: $faq-card-header-icon-margin;
+          width: $faq-card-icon-padding;
+          color: $faq-card-icon-color;
+        }
+
+        &__question {
+
+        }
+      }
+
+      &:first-of-type,
+      &:last-of-type {
+        border-radius: 0;
+      }
+
+      &.active {
+        .card-header {
+          border-color: $faq-active-card-header-border-color;
+          &__icon {
+            color: $faq-active-card-icon-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+$owl-dot-hover-background: $secondary-color-light;
+$owl-dot-active-background: $secondary-color-dark;
+// Przełącznik poszczególnych elementów slidera
+.owl-carousel {
+  .owl-dots {
+    .owl-dot {
+      &:hover {
+        span {
+          background-color: $owl-dot-hover-background;
+        }
+      }
+
+      &.active {
+        span {
+          background-color: $owl-dot-active-background;
+        }
+      }
+    }
+  }
+}
+
+$contact-form-container-background: $white-color;
+$contact-form-container-padding: 32px;
+$contact-form-container-box-shadow: 0 0 5px 2px rgba(0, 0, 0, .1);
+$contact-form-height: 100vh;
+$contact-form-privacy-policy-checkbox-margin-x: 4px;
+$contact-form-privacy-policy-checkbox-height: 16px;
+$contact-form-privacy-policy-checkbox-width: $contact-form-privacy-policy-checkbox-height;
+$contact-form-privacy-policy-font-size: 12px;
+$contact-form-privacy-policy-margin-x: 8px;
+$contact-form-privacy-policy-text-align: justify;
+.contact-section {
+  margin: 0;
+  background: url(../images/contact.jpg) bottom center fixed;
+  background-size: cover;
+  height: $contact-form-height;
+
+  .contact-info {
+    &__item {
+      color: white;
+      font-size: 30px;
+
+      i {
+        padding-right: 16px;
+        width: 50px;
+        text-align: center;
+      }
+
+      a {
+        margin-left: -4px;
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .contact-form {
+    &__container {
+      background: $contact-form-container-background;
+      padding: $contact-form-container-padding;
+      box-shadow: $contact-form-container-box-shadow;
+    }
+
+    &__privacy-policy {
+      display: flex;
+      font-size: $contact-form-privacy-policy-font-size;
+      text-align: $contact-form-privacy-policy-text-align;
+
+      .privacy-policy-label {
+        margin-left: $contact-form-privacy-policy-margin-x;
+      }
+
+      input[type='checkbox'] {
+        width: $contact-form-privacy-policy-checkbox-width;
+        height: $contact-form-privacy-policy-checkbox-height;
+        flex: 1 0 auto;
+        margin-top: $contact-form-privacy-policy-checkbox-margin-x;
+      }
+    }
+  }
+}
+
+$page-title-full-height: 100vh;
+$page-title-height: 50vh;
+$page-title-text-color: $white-color;
+$page-title-header-font-size: 30px;
+$page-title-header-font-weight: 700;
+$page-title-mask-background-color: rgba(0, 0, 0, .5);
+$page-title-separator-background-color: $white-color;
+$page-title-separator-width: 50%;
+$page-title-separator-margin-top: 16px;
+$page-title-separator-margin-bottom: 16px;
+$page-title-text-transform: uppercase;
+$page-title-paragraph-font-weight: 400;
+$page-title-paragraph-text-transform: $page-title-text-transform;
+$page-title-paragraph-font-size: 16px;
+.page-title {
+  background: url(../images/slider/slider_3.jpg) center center fixed;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: $page-title-height;
+  color: $page-title-text-color;
+  text-align: center;
+
+  h1 {
+    font-weight: $page-title-header-font-weight;
+    font-size: $page-title-header-font-size;
+    text-transform: $page-title-text-transform;
+  }
+
+  p {
+    font-size: $page-title-paragraph-font-size;
+    text-transform: $page-title-paragraph-text-transform;
+    font-weight: $page-title-paragraph-font-weight;
+  }
+
+  &__separator {
+    border-top: 1px solid $page-title-separator-background-color;
+    width: $page-title-separator-width;
+    margin-top: $page-title-separator-margin-top;
+    margin-bottom: $page-title-separator-margin-bottom;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $page-title-mask-background-color;
+  }
+
+  &.full {
+    background-image: url(../images/headers/blog.jpg);
+    min-height: $page-title-full-height;
+  }
+}
+
+$post-url-text-color: $black-color;
+.posts {
+  .post {
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+
+    &__image {
+      height: 450px;
+      object-fit: cover;
+    }
+
+    &__title {
+      text-transform: uppercase;
+    }
+
+    &__date {
+
+    }
+
+    &__excerpt {
+
+    }
+
+    &__url {
+      color: $post-url-text-color;
+      text-transform: uppercase;
+      font-weight: 400;
+
+      .fa {
+        margin-left: 5px;
+        font-size: 14px;
+        transition: 300ms;
+      }
+
+      &:hover {
+        text-decoration: none;
+
+        .fa {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

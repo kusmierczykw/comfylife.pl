@@ -1,0 +1,28 @@
+@import "colors";
+
+$primary-button-background: $primary-color-dark;
+$primary-button-hover-background: $primary-color;
+$primary-button-focus-background: $primary-color;
+$primary-button-text-color: $white-color;
+.btn {
+  border-radius: 0;
+  border: 0;
+  padding-left: 2em;
+  padding-right: 2em;
+
+  &.btn-primary {
+    background-color: $primary-button-background;
+    color: $primary-button-text-color;
+
+    &:not(:disabled):not(.disabled) {
+      &:hover {
+        background-color: $primary-button-hover-background;
+      }
+
+      &:focus,
+      &:active {
+        background-color: $primary-button-focus-background;
+      }
+    }
+  }
+}

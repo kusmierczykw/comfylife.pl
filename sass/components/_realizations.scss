@@ -1,0 +1,60 @@
+@import "../variables";
+@import "../colors";
+
+$realization-item-margin: 15px;
+
+$realization-description-animation-duration: 250ms;
+$realization-description-text-color: $white-color;
+$realization-description-font-size: $font-size-lg;
+$realization-description-title-font-size: $font-size-xl;
+$realization-description-background: rgba($primary-color-dark, .9);
+$realization-description-padding: 30px;
+.realizations {
+  .realization {
+    &__item {
+      cursor: pointer;
+      position: relative;
+      margin-bottom: $realization-item-margin;
+
+      &:hover {
+        .realization__item-wrapper {
+          opacity: 1;
+        }
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__item-wrapper {
+      top: 0;
+      left: 0;
+      opacity: 0;
+      width: calc(100% - #{$realization-description-padding});
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+      position: absolute;
+      flex-direction: column;
+      justify-content: center;
+      transition: opacity $realization-description-animation-duration;
+      padding: $realization-description-padding;
+      margin: 0 $realization-item-margin;
+      color: $realization-description-text-color;
+      background-color: $realization-description-background;
+
+    }
+
+    &__item-title {
+      font-weight: bold;
+      font-size: $realization-description-title-font-size;
+    }
+
+    &__item-description {
+      font-size: $realization-description-font-size;
+    }
+  }
+}

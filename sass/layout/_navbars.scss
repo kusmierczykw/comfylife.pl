@@ -1,0 +1,161 @@
+@import "../variables";
+@import "../colors";
+
+$navbar-border-width: 3px;
+$navbar-border-color: rgba($white-color, 0.8);
+$navbar-background: rgba($black-color, 0.4);
+$navbar-item-text-color: $white-color;
+$navbar-item-padding-x: 1em;
+$navbar-item-hover-color: $white-color;
+$navbar-item-font-size: $font-size-md;
+$navbar-item-font-weight: 700;
+$navbar-padding: 25px 10px 15px;
+$navbar-collapsed-padding: 17px 10px 8px;
+$navbar-dropdown-menu-text-color: $black-color;
+$navbar-dropdown-menu-item-font-size: $font-size-md;
+$navbar-dropdown-menu-item-padding: 15px;
+$navbar-inversed-background: $white-color;
+$navbar-inversed-item-text-color: $black-color;
+$navbar-inversed-item-hover-color: $black-color;
+$navbar-inversed-border-color: $black-color;
+$navbar-inversed-social-media-border-color: $navbar-inversed-item-text-color;
+$navbar-inversed-social-media-text-color: $navbar-inversed-item-text-color;
+$navbar-brand-image-height: 30px;
+$navbar-social-media-border-color: $navbar-item-text-color;
+$navbar-social-media-text-color: $navbar-item-text-color;
+$navbar-social-media-margin-x: 16px;
+$navbar-social-media-item-padding-x: 0.5em;
+.navbar {
+  transition: all 300ms;
+  padding: $navbar-padding;
+  background: $navbar-background;
+  box-shadow: 0 0 6px $navbar-border-color;
+
+  &-brand {
+    display: none;
+
+    img {
+      height: $navbar-brand-image-height;
+    }
+  }
+
+  &-social-media {
+    border-left: 1px solid $navbar-social-media-border-color;
+    margin-left: $navbar-social-media-margin-x;
+
+    a:first-of-type {
+      margin-left: $navbar-social-media-margin-x;
+    }
+
+    a {
+      text-decoration: none;
+      color: $navbar-social-media-text-color;
+      padding-left: $navbar-social-media-item-padding-x;
+      padding-right: $navbar-social-media-item-padding-x;
+    }
+  }
+
+  &-nav {
+    > li {
+      font-weight: $navbar-item-font-weight;
+      font-size: $navbar-item-font-size;
+
+      > a {
+        text-transform: uppercase;
+        position: relative;
+        color: $navbar-item-text-color;
+        padding-left: $navbar-item-padding-x;
+        padding-right: $navbar-item-padding-x;
+
+        &:hover,
+        &:focus {
+          color: $navbar-item-hover-color;
+        }
+
+        // Animacja ruchomej linii po najechaniu myszką
+        &:before {
+          content: '';
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          position: absolute;
+          transform: scaleX(0);
+          transition: all 0.4s ease;
+          height: $navbar-border-width;
+          background: $navbar-item-hover-color;
+        }
+
+        &:hover {
+          &:before {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+  }
+
+  &-menu {
+    border-radius: 0;
+    li {
+      font-weight: bold;
+      font-size: $navbar-dropdown-menu-item-font-size;
+
+      a {
+        text-transform: uppercase;
+        padding-left: $navbar-dropdown-menu-item-padding;
+        padding-right: $navbar-dropdown-menu-item-padding;
+        color: $navbar-dropdown-menu-text-color;
+
+        &:hover {
+          background: transparent;
+        }
+
+        &.focus,
+        &.active,
+        &:active {
+          background: inherit;
+        }
+      }
+    }
+  }
+
+  &__collapsed {
+    padding: $navbar-collapsed-padding;
+
+    .navbar-brand {
+      display: block;
+    }
+  }
+
+  &__inversed {
+    box-shadow: 0 0 6px 0 $navbar-inversed-border-color;
+    background-color: $navbar-inversed-background;
+    .navbar {
+      &-nav {
+        li {
+          a {
+            color: $navbar-inversed-item-text-color;
+
+            &:hover,
+            &:focus {
+              color: $navbar-inversed-item-hover-color;
+            }
+
+            &:before {
+              background-color: $navbar-inversed-item-hover-color;
+            }
+          }
+        }
+      }
+
+      &-social-media {
+        border-color: $navbar-inversed-social-media-border-color;
+        a {
+          color: $navbar-inversed-social-media-text-color;
+        }
+      }
+
+
+    }
+  }
+}

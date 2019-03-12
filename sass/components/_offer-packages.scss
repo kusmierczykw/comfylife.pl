@@ -1,0 +1,125 @@
+@import "../variables";
+@import "../colors";
+
+$offer-package-switcher-item-width: 180px;
+$offer-package-switcher-item-height: $offer-package-switcher-item-width;
+$offer-package-switcher-item-font-size: $font-size-xl;
+$offer-package-switcher-item-font-weight: 400;
+$offer-package-switcher-item-text-color: $white-color;
+$offer-package-switcher-item-margin: 15px;
+$offer-package-switcher-item-first-background: $primary-color-light;
+$offer-package-switcher-item-second-background: $primary-color;
+$offer-package-switcher-item-third-background: $primary-color-dark;
+
+$offer-package-item-background-color: $primary-color-dark;
+$offer-package-item-width: 700px;
+$offer-package-item-height: 560px;
+$offer-package-item-text-color: $white-color;
+$offer-package-item-padding: 40px;
+.offer {
+  &__packages {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  // Style dla poszczególnych opisów
+  &__package-item {
+    position: relative;
+    background-size: cover;
+    display: none;
+    padding: $offer-package-item-padding;
+
+    &-wrapper {
+      border: 4px solid white !important;
+      z-index: 1;
+      position: relative;
+      padding: $offer-package-item-padding;
+      color: $offer-package-item-text-color;
+      min-height: $offer-package-item-height;
+      width: 100%;
+
+      //TODO usunąć parametry poniżej i dać możliwość osadzenia parametrów w Wordpress
+      font-size: $font-size-xl;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.8;
+      background: $offer-package-item-background-color;
+    }
+
+    &.active {
+      display: block !important;
+    }
+  }
+
+  &__packages-view {
+    flex: 5;
+  }
+
+  // Style dla switchera
+  &__packages-switcher {
+    flex: 2;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .switcher-item {
+      text-align: center;
+      margin-bottom: $offer-package-switcher-item-margin;
+      color: $offer-package-switcher-item-text-color;
+      font-size: $offer-package-switcher-item-font-size;
+      font-weight: $offer-package-switcher-item-font-weight;
+
+      a {
+        cursor: pointer;
+        color: inherit;
+
+        &:hover {
+          color: inherit;
+          text-decoration: inherit;
+        }
+      }
+
+      &__label {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        //transition: background-color 0.4s;
+        width: $offer-package-switcher-item-width;
+        height: $offer-package-switcher-item-height;
+        border-radius: $offer-package-switcher-item-height;
+        transition: 200ms;
+
+
+        &:hover{
+          transform: scale(1.1);
+        }
+      }
+
+      &:nth-of-type(1){
+        .switcher-item__label{
+          background: $offer-package-switcher-item-first-background;
+        }
+      }
+
+      &:nth-of-type(2){
+        .switcher-item__label{
+          background: $offer-package-switcher-item-second-background;
+        }
+      }
+
+      &:nth-of-type(3){
+        .switcher-item__label{
+          background: $offer-package-switcher-item-third-background;
+        }
+      }
+    }
+  }
+}

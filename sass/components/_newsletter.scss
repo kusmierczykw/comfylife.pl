@@ -1,0 +1,119 @@
+@import "../variables";
+@import "../colors";
+
+$newsletter-background-color: $secondary-color-light;
+$newsletter-background-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+$newsletter-close-button-padding-y: 1em;
+$newsletter-close-button-padding-x: $newsletter-close-button-padding-y;
+$newsletter-close-button-icon-color: $black-color;
+$newsletter-close-button-hover-background: $black-color;
+$newsletter-close-button-background: transparent;
+$newsletter-close-button-position-x: 25px;
+$newsletter-close-button-position-y: 25px;
+$newsletter-container-shadow: none;
+$newsletter-container-padding-y: 2.2em;
+$newsletter-container-padding-x: 15px;
+$newsletter-container-background: transparent;
+$newsletter-label-text-size: 14px;
+$newsletter-label-color: inherit;
+$newsletter-label-header-text-size: 32px;
+$newsletter-label-header-font-weight: 100;
+$newsletter-z-index: 999999;
+.newsletter {
+  top: 0;
+  left: 0;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .3);
+  z-index: $newsletter-z-index;
+  display: none;
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: skewY(-30deg);
+    background: $newsletter-background-color;
+    box-shadow: $newsletter-background-box-shadow;
+
+    .image-1 {
+      background: url(../images/newsletter/book.png) no-repeat;
+      background-size: contain;
+      height: 618px;
+      width: 520px;
+      transform: skewY(30deg);
+      position: absolute;
+      left: 10%;
+      top: 15%;
+    }
+
+    .image-2 {
+      background: url(../images/newsletter/meansure.png) no-repeat;
+      background-size: contain;
+      height: 511px;
+      width: 800px;
+      transform: skewY(30deg);
+      position: absolute;
+      right: 5%;
+      bottom: 15%;
+    }
+  }
+
+  &__container {
+    position: relative;
+    background-color: $newsletter-container-background;
+    padding: $newsletter-container-padding-y $newsletter-container-padding-x;
+    box-shadow: $newsletter-container-shadow;
+  }
+
+  &__label {
+    text-align: center;
+    text-transform: uppercase;
+    color: $newsletter-label-color;
+
+    h2, p {
+      margin: 0;
+    }
+
+    p {
+      font-size: $newsletter-label-text-size;
+    }
+
+    h2 {
+      font-weight: $newsletter-label-header-font-weight;
+      font-size: $newsletter-label-header-text-size;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-size: 12px;
+      font-weight: 100;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+
+  &--close {
+    top: $newsletter-close-button-position-y;
+    right: $newsletter-close-button-position-x;
+    border: 0;
+    border-radius: 0;
+    cursor: pointer;
+    position: absolute;
+    background-color: $newsletter-close-button-background;
+    padding: $newsletter-close-button-padding-y $newsletter-close-button-padding-x;
+    color: $newsletter-close-button-icon-color;
+
+    &:hover {
+      color: rgba($newsletter-close-button-hover-background, 1);
+    }
+  }
+}

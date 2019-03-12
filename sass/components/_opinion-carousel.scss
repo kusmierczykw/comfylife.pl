@@ -1,0 +1,48 @@
+@import "../variables";
+@import "../colors";
+
+$opinion-carousel-border-color: rgba($black-color, .4);
+$opinion-carousel-border-width: 1px;
+$opinion-carousel-padding: 20px;
+$opinion-item-font-size: $font-size-lg;
+$opinion-item-username-font-weight: 400;
+.opinion {
+  &__carousel {
+    position: relative;
+    border-left: $opinion-carousel-border-width solid $opinion-carousel-border-color;
+    border-right: $opinion-carousel-border-width solid $opinion-carousel-border-color;
+    padding: $opinion-carousel-padding;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: $opinion-carousel-padding;
+      border-top: $opinion-carousel-border-width solid $opinion-carousel-border-color;
+      border-bottom: $opinion-carousel-border-width solid $opinion-carousel-border-color;
+    }
+
+    &:before {
+      left: 0;
+    }
+
+    &:after {
+      right: 0;
+    }
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__description {
+    font-style: italic;
+    font-size: $opinion-item-font-size;
+  }
+
+  &__user-name {
+    font-weight: $opinion-item-username-font-weight;
+  }
+}

@@ -1,0 +1,23 @@
+.card {
+  border-radius: 0;
+  border: 0;
+
+  .card-img,
+  .card-body,
+  .card-footer {
+    border-radius: 0;
+  }
+
+  .card-img {
+    border: 0;
+  }
+
+  .card-body {
+
+  }
+
+  .card-footer {
+    border: 0;
+    background: transparent;
+  }
+}
