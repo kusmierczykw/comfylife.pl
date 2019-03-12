@@ -4,7 +4,12 @@ $form-control-border: 1px solid rgba(0, 0, 0, 0.4);
 $form-control-height: 48px;
 $form-control-label-font-size: 14px;
 $form-control-label-text-transform: uppercase;
-
+$contact-form-privacy-policy-checkbox-margin-x: 4px;
+$contact-form-privacy-policy-checkbox-height: 16px;
+$contact-form-privacy-policy-checkbox-width: $contact-form-privacy-policy-checkbox-height;
+$contact-form-privacy-policy-font-size: 12px;
+$contact-form-privacy-policy-margin-x: 8px;
+$contact-form-privacy-policy-text-align: justify;
 .form-group {
   margin: 0;
 }
@@ -22,4 +27,21 @@ $form-control-label-text-transform: uppercase;
 
 input.form-control{
   height: $form-control-height;
+}
+
+.privacy-policy {
+  display: flex;
+  font-size: $contact-form-privacy-policy-font-size;
+  text-align: $contact-form-privacy-policy-text-align;
+
+  &-label {
+    margin-left: $contact-form-privacy-policy-margin-x;
+  }
+
+  input[type='checkbox'] {
+    width: $contact-form-privacy-policy-checkbox-width;
+    height: $contact-form-privacy-policy-checkbox-height;
+    flex: 1 0 auto;
+    margin-top: $contact-form-privacy-policy-checkbox-margin-x;
+  }
 }

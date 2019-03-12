@@ -149,12 +149,6 @@ $contact-form-container-background: $white-color;
 $contact-form-container-padding: 32px;
 $contact-form-container-box-shadow: 0 0 5px 2px rgba(0, 0, 0, .1);
 $contact-form-height: 100vh;
-$contact-form-privacy-policy-checkbox-margin-x: 4px;
-$contact-form-privacy-policy-checkbox-height: 16px;
-$contact-form-privacy-policy-checkbox-width: $contact-form-privacy-policy-checkbox-height;
-$contact-form-privacy-policy-font-size: 12px;
-$contact-form-privacy-policy-margin-x: 8px;
-$contact-form-privacy-policy-text-align: justify;
 .contact-section {
   margin: 0;
   background: url(../images/contact.jpg) bottom center fixed;
@@ -185,23 +179,6 @@ $contact-form-privacy-policy-text-align: justify;
       background: $contact-form-container-background;
       padding: $contact-form-container-padding;
       box-shadow: $contact-form-container-box-shadow;
-    }
-
-    &__privacy-policy {
-      display: flex;
-      font-size: $contact-form-privacy-policy-font-size;
-      text-align: $contact-form-privacy-policy-text-align;
-
-      .privacy-policy-label {
-        margin-left: $contact-form-privacy-policy-margin-x;
-      }
-
-      input[type='checkbox'] {
-        width: $contact-form-privacy-policy-checkbox-width;
-        height: $contact-form-privacy-policy-checkbox-height;
-        flex: 1 0 auto;
-        margin-top: $contact-form-privacy-policy-checkbox-margin-x;
-      }
     }
   }
 }
