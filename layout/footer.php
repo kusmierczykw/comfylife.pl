@@ -6,7 +6,7 @@
  * Time: 11:58
  */
 ?>
-
+<hr/>
 <footer>
     Copyright &copy; <?php echo date('Y'); ?> design by ComfyLife
 </footer>

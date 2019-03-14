@@ -190,7 +190,7 @@ $page-title-header-font-size: 30px;
 $page-title-header-font-weight: 700;
 $page-title-mask-background-color: rgba(0, 0, 0, .5);
 $page-title-separator-background-color: $white-color;
-$page-title-separator-width: 50%;
+$page-title-separator-width: 70%;
 $page-title-separator-margin-top: 16px;
 $page-title-separator-margin-bottom: 16px;
 $page-title-text-transform: uppercase;
@@ -198,13 +198,21 @@ $page-title-paragraph-font-weight: 400;
 $page-title-paragraph-text-transform: $page-title-text-transform;
 $page-title-paragraph-font-size: 16px;
 .page-title {
-  background: url(../images/slider/slider_3.jpg) center center fixed;
-  background-size: cover;
   position: relative;
   width: 100%;
   height: $page-title-height;
   color: $page-title-text-color;
   text-align: center;
+
+  &__background {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
 
   h1 {
     font-weight: $page-title-header-font-weight;
@@ -236,49 +244,56 @@ $page-title-paragraph-font-size: 16px;
   }
 
   &.full {
-    background-image: url(../images/headers/blog.jpg);
     min-height: $page-title-full-height;
   }
 }
 
 $post-url-text-color: $black-color;
-.posts {
-  .post {
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+$post-url-font-weight: bold;
+$post-url-text-transform: uppercase;
+$post-url-icon-margin-x: 5px;
+$post-url-icon-hover-margin-x: 10px;
+$post-url-icon-size: 14px;
+$post-url-icon-transition: 300ms;
+$post-url-hover-text-color: $black-color;
 
-    &__image {
-      height: 450px;
-      object-fit: cover;
-    }
+$post-image-height: 450px;
+$post-title-text-transform: uppercase;
+.post {
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
 
-    &__title {
-      text-transform: uppercase;
-    }
+  &__image {
+    height: $post-image-height;
+    object-fit: cover;
+  }
 
-    &__date {
+  &__title {
+    text-transform: $post-title-text-transform;
+  }
 
-    }
+  &__excerpt,
+  &__content {
+    line-height: 2.5;
+  }
 
-    &__excerpt {
-
-    }
-
-    &__url {
+  &__url {
+    a {
       color: $post-url-text-color;
-      text-transform: uppercase;
-      font-weight: 400;
+      text-transform: $post-url-text-transform;
+      font-weight: $post-url-font-weight;
 
       .fa {
-        margin-left: 5px;
-        font-size: 14px;
-        transition: 300ms;
+        margin-left: $post-url-icon-margin-x;
+        font-size: $post-url-icon-size;
+        transition: $post-url-icon-transition;
       }
 
       &:hover {
         text-decoration: none;
+        color: $post-url-hover-text-color;
 
         .fa {
-          margin-left: 10px;
+          margin-left: $post-url-icon-hover-margin-x;
         }
       }
     }

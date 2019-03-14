@@ -11,6 +11,9 @@
 
 <?php get_template_part('layout/header'); ?>
 <section class="container-fluid page-title full">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/headers/blog.jpg" class="page-title__background"
+         alt="">
+
     <div class="row align-items-center h-100">
         <div class="container">
             <div class="row">
@@ -25,26 +28,29 @@
             </div>
         </div>
 
-        <div class="icon-scroll">
-            <span class="text">Scroll</span>
-        </div>
+        <!--        <div class="icon-scroll">-->
+        <!--            <span class="text">Scroll</span>-->
+        <!--        </div>-->
     </div>
 </section>
+
 <section class="container-fluid">
     <div class="row py-6">
-        <div class="col-lg-auto p-1 p-lg-3">
-            <div class="container p-1">
-                <div class="col-lg-9 offset-lg-3">
-                    <div class=" posts">
-                        <?php get_template_part('loop'); ?>
-                    </div>
-                    <div id="inifiniteLoader" class="text-center mt-5 mb-5" style="display: none;">
-                        <i class="fas fa-2x fa-spinner fa-spin"></i>
+        <div class="col-lg-auto offset-xl-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 offset-lg-3 mx-auto">
+                        <div class=" posts">
+                            <?php get_template_part('loop'); ?>
+                        </div>
+                        <div id="inifiniteLoader" class="text-center mt-5 mb-5" style="display: none;">
+                            <i class="fas fa-2x fa-spinner fa-spin"></i>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg offset-lg-1 pr-0">
+        <div class="col-lg pr-0">
             <div class="position-sticky" style="top: 65px;">
                 <div>
                     <img src="<?php echo get_template_directory_uri(); ?>/images/strona_gotowa_07.jpg"

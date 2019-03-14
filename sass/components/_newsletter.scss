@@ -2,14 +2,14 @@
 @import "../colors";
 
 $newsletter-background-color: $secondary-color-light;
-$newsletter-background-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+$newsletter-background-box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.1);
 $newsletter-close-button-padding-y: 1em;
 $newsletter-close-button-padding-x: $newsletter-close-button-padding-y;
 $newsletter-close-button-icon-color: $black-color;
 $newsletter-close-button-hover-background: $black-color;
 $newsletter-close-button-background: transparent;
-$newsletter-close-button-position-x: 25px;
-$newsletter-close-button-position-y: 25px;
+$newsletter-close-button-position-x: 15px;
+$newsletter-close-button-position-y: 15px;
 $newsletter-container-shadow: none;
 $newsletter-container-padding-y: 2.2em;
 $newsletter-container-padding-x: 15px;

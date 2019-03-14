@@ -71,23 +71,19 @@
             </div>
         </div>
     </div>
-    <ul class="offer__packages-switcher" id="offer-packages-switcher">
-        <li class="switcher-item">
-            <a class="switcher-item__label" href="#pakiet-podstawowy">
-                pakiet podstawowy
-            </a>
-        </li>
-        <li class="switcher-item">
-            <a class="switcher-item__label" href="#pakiet-kompleksowy">
-                pakiet kompleksowy
-            </a>
-        </li>
-        <li class="switcher-item">
-            <a class="switcher-item__label" href="#pakiet-po-klucz">
-                pakiet po klucz
-            </a>
-        </li>
-    </ul>
+    <div class="offer__packages-switcher" id="offer-packages-switcher">
+        <button type="button" class="switcher-item" dataUrl="#pakiet-podstawowy">
+            pakiet podstawowy
+        </button>
+
+        <button type="button" class="switcher-item" dataUrl="#pakiet-kompleksowy">
+            pakiet kompleksowy
+        </button>
+
+        <button type="button" class="switcher-item" dataUrl="#pakiet-po-klucz">
+            pakiet po klucz
+        </button>
+    </div>
 </div>
 
 <script src="<?php echo get_template_directory_uri(); ?>/js/offer-packages.js?v=<?php echo current_time('timestamp', 0); ?>"></script>

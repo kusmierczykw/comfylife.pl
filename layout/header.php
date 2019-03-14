@@ -60,11 +60,11 @@
         ?>
 
         <div class="navbar-social-media d-none d-lg-block">
-            <a href="" target="_blank">
+            <a href="https://www.facebook.com/comfylifedesign/" target="_blank">
                 <i class="fab fa-facebook"></i>
             </a>
 
-            <a href="" target="_blank">
+            <a href="https://www.instagram.com/comfylife_design/" target="_blank">
                 <i class="fab fa-instagram"></i>
             </a>
         </div>

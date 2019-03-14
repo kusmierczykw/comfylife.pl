@@ -9,6 +9,8 @@
 <?php get_template_part('layout/header'); ?>
 
 <section class="container-fluid page-title">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/slider/slider_3.jpg" class="page-title__background" alt="">
+
     <div class="row align-items-center h-100">
         <div class="container">
             <div class="row">

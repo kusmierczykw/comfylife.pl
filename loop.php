@@ -11,16 +11,18 @@
     <div class="card mb-6 post">
         <div class="row no-gutters">
             <div class="col-md-12">
-                <img src="<?php echo get_the_post_thumbnail_url(null, 'large') ?>" class="card-img post__image"
-                     alt="<?php echo get_the_title(); ?>">
+                <?php if (!!get_the_post_thumbnail_url(null, 'large')): ?>
+                    <img src="<?php echo get_the_post_thumbnail_url(null, 'large') ?>" class="card-img post__image"
+                         alt="<?php echo get_the_title(); ?>">
+                <?php endif; ?>
             </div>
 
             <div class="col-md-12">
                 <div class="card-body">
                     <h4 class="card-title">
-                        <span class="post__title">
+                        <div class="post__title">
                             <?php echo get_the_title(); ?>
-                        </span>
+                        </div>
                     </h4>
                     <p class="card-text">
                         <small class="text-muted post__date">
@@ -28,15 +30,17 @@
                         </small>
                     </p>
                     <p class="card-text">
-                        <span class="post__excerpt">
-                            <?php echo get_the_excerpt(); ?>
-                        </span>
+                    <div class="post__excerpt">
+                        <?php echo get_the_excerpt(); ?>
+                    </div>
                     </p>
                 </div>
                 <div class="card-footer">
-                    <a href="<?php echo get_permalink(); ?>" class="post__url">
-                        Czytaj więcej <i class="fa fas fa-chevron-right"></i>
-                    </a>
+                    <span class="post__url right">
+                        <a href="<?php echo get_permalink(); ?>">
+                            Czytaj więcej <i class="fa fas fa-chevron-right"></i>
+                        </a>
+                    </span>
                 </div>
             </div>
         </div>
