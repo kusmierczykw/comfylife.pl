@@ -56,7 +56,7 @@
                     </div>
 
                     <div class="contact-info__item">
-                        <i class="fa fa-at"></i>
+                        <i class="far fa-envelope-open"></i>
                         <a href="mailto:kontakt@comfy-life.pl"
                            target="_blank">kontakt@comfy-life.pl</a></div>
 

@@ -1,0 +1,57 @@
+@import "../colors";
+@import "../variables";
+
+$social-media-bar-background: $black-color;
+$social-media-bar-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+$social-media-bar-z-index: 10000;
+$social-media-bar-element-width: 50px;
+$social-media-bar-element-height: $social-media-bar-element-width;
+.social-media-bar {
+  position: fixed;
+  left: 0;
+  top: 35%;
+  z-index: $social-media-bar-z-index;
+  background: $social-media-bar-background;
+  box-shadow: $social-media-bar-box-shadow;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: flex;
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: $white-color;
+        width: $social-media-bar-element-width;
+        height: $social-media-bar-element-height;
+
+        &:hover {
+          text-decoration: none;
+          background: rgba(255, 255, 255, 0.1);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $grid-breakpoint-md) {
+  .social-media-bar {
+    justify-content: center;
+    top: unset;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    ul {
+      li {
+        display: inline-flex;
+      }
+    }
+  }
+}

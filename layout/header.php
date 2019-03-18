@@ -36,6 +36,8 @@
 </head>
 <body>
 
+<?php get_template_part('components/social-media-bar'); ?>
+
 <nav class="navbar navbar-expand-lg fixed-top" role="navigation">
     <div class="container">
         <a class="navbar-brand" href="<?php echo get_page_uri(); ?>">

@@ -74,7 +74,7 @@
 </section>
 
 <section class="container">
-    <div class="row realization">
+    <div class="row">
         <div class="col-xl-12 py-5">
             <?php get_template_part('components/realizations'); ?>
         </div>
@@ -84,10 +84,18 @@
 <section class="container">
     <div class="row">
         <div class="col-xl-12 pb-5">
-            <?php get_template_part('layout/newsletter-section'); ?>
+            <?php get_template_part('components/newsletter-bar'); ?>
         </div>
     </div>
 </section>
 
-<?php get_template_part('components/newsletter'); ?>
+<section class="container short-contact">
+    <div class="row">
+        <div class="col-xl-12 pb-5">
+            <?php get_template_part('components/short-contact-info'); ?>
+        </div>
+    </div>
+</section>
+
+<?php //get_template_part('components/newsletter'); ?>
 <?php get_template_part('layout/footer'); ?>

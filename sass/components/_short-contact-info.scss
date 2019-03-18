@@ -1,0 +1,23 @@
+@import "../colors";
+
+$short-contact-info-item-margin-x: 8px;
+$short-contact-info-item-margin-y: $short-contact-info-item-margin-x;
+$short-contact-info-font-size: 18px;
+$short-contact-info-color: $black-color;
+
+.short-contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .contact-info {
+    &__item {
+      margin: $short-contact-info-item-margin-y $short-contact-info-item-margin-x;
+      font-size: $short-contact-info-font-size;
+
+      a {
+        color: $short-contact-info-color;
+      }
+    }
+  }
+}

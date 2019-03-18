@@ -27,7 +27,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!--                <div class="icon-scroll">-->
                 <!--                    <span class="text">Scroll</span>-->
                 <!--                </div>-->
@@ -56,7 +55,7 @@
         <section class="container">
             <div class="row">
                 <div class="col-xl-12 pb-5">
-                    <?php get_template_part('layout/newsletter-section'); ?>
+                    <?php get_template_part('components/newsletter-bar'); ?>
                 </div>
             </div>
         </section>
