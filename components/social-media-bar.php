@@ -11,19 +11,19 @@
     <ul>
         <li>
             <a href="https://www.facebook.com/comfylifedesign/" target="_blank" title="Facebook">
-                <i class="fab fa-facebook"></i>
+                <i class="icon fab fa-facebook"></i>
             </a>
         </li>
 
         <li>
             <a href="https://www.instagram.com/comfylife_design/" target="_blank" title="Instagram">
-                <i class="fab fa-instagram"></i>
+                <i class="icon fab fa-instagram"></i>
             </a>
         </li>
 
         <li>
             <a href="mailto:kontakt@comfy-life.pl" target="_blank" title="Adres e-mail">
-                <i class="far fa-envelope-open"></i>
+                <i class="icon far fa-envelope-open"></i>
             </a>
         </li>
     </ul>

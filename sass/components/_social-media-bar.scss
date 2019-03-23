@@ -23,20 +23,18 @@ $social-media-bar-element-height: $social-media-bar-element-width;
       display: flex;
 
       a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: $white-color;
-        width: $social-media-bar-element-width;
-        height: $social-media-bar-element-height;
-
         &:hover {
           text-decoration: none;
-          background: rgba(255, 255, 255, 0.1);
+          .icon {
+            background: rgba(255, 255, 255, 0.1);
+          }
         }
       }
     }
+  }
+
+  .icon {
+    margin: 0;
   }
 }
 
