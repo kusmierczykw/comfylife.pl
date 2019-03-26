@@ -33,16 +33,16 @@
         <div class="col-xl-12">
             <!-- Sekcja ze zdjęciami oraz podpisami -->
             <div class="row about-us__photos align-items-start">
-                <div class="col-xl-3 col-lg-3 col-md-6 about-us__single-photo">
+                <div class="col-xl col-lg-3 col-sm-6 about-us__single-photo">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/strona_gotowa_05.jpg"/>
                     <div class="about-us__signature">Zuzanna Kożuch</div>
                 </div>
 
-                <div class="col-xl-6 col-lg-6 about-us__single-photo d-none d-lg-block">
+                <div class="col-xl-5 col-lg-6 about-us__single-photo d-none d-lg-block">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/strona_gotowa_07.jpg"/>
                 </div>
 
-                <div class="col-xl-3 col-lg-3 col-md-6 about-us__single-photo">
+                <div class="col-xl col-lg-3 col-sm-6 about-us__single-photo">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/strona_gotowa_09.jpg"/>
                     <div class="about-us__signature">Agata Jankowska</div>
                 </div>

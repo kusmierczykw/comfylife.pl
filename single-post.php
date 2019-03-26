@@ -10,9 +10,12 @@
 <main class="single-post">
     <?php if (have_posts()): while (have_posts()): the_post(); ?>
         <section class="container-fluid page-title full">
-            <img src="<?php echo get_the_post_thumbnail_url(null, 'large') ?>"
-                 class="page-title__background"
-                 alt="<?php echo get_the_title(); ?>">
+            <?php $thumbnail = get_the_post_thumbnail_url(null, 'large'); ?>
+            <?php if ($thumbnail): ?>
+                <img src="<?php echo $thumbnail; ?>"
+                     alt="<?php echo get_the_title(); ?>"
+                     class="page-title__background" />
+            <?php endif; ?>
 
             <div class="row align-items-center h-100">
                 <div class="container">

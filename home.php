@@ -41,7 +41,7 @@
                 <div class="row">
                     <div class="col-lg-9 offset-lg-3 mx-auto">
                         <div class=" posts">
-                            <?php get_template_part('loop'); ?>
+                            <?php get_template_part('loops/post'); ?>
                         </div>
                         <div id="inifiniteLoader" class="text-center mt-5 mb-5" style="display: none;">
                             <i class="fas fa-2x fa-spinner fa-spin"></i>
@@ -90,7 +90,7 @@
             $.ajax({
                 url: "<?php echo admin_url(); ?>admin-ajax.php",
                 type: 'POST',
-                data: "action=load_posts_by_ajax&page_no=" + pageNumber + '&loop_file=loop&what=posts',
+                data: "action=load_posts_by_ajax&page_no=" + pageNumber + '&loop_file=loops/post&what=posts',
                 success: function (html) {
                     $('#inifiniteLoader').fadeOut('fast');
                     $('.posts').append(html);

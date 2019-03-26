@@ -5,10 +5,11 @@ $realization-item-margin: 15px;
 
 $realization-description-animation-duration: 250ms;
 $realization-description-text-color: $white-color;
-$realization-description-font-size: $font-size-lg;
+$realization-description-font-size: $font-size-md;
 $realization-description-title-font-size: $font-size-xl;
 $realization-description-background: rgba($primary-color-dark, .9);
 $realization-description-padding: 30px;
+$realization-description-font-weight: normal;
 .realizations {
   .realization {
     &__item {
@@ -24,6 +25,7 @@ $realization-description-padding: 30px;
 
       img {
         width: 100%;
+        height: 100%;
         object-fit: cover;
       }
     }
@@ -55,6 +57,7 @@ $realization-description-padding: 30px;
 
     &__item-description {
       font-size: $realization-description-font-size;
+      font-weight: $realization-description-font-weight;
     }
   }
 }

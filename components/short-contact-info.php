@@ -25,14 +25,6 @@
 
         <div class="col-lg-4 col-md-6">
             <div class="contact-info__item">
-                <i class="icon far fa-envelope-open"></i>
-                <a href="mailto:kontakt@comfy-life.pl"
-                   target="_blank">kontakt@comfy-life.pl</a>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-            <div class="contact-info__item">
                 <i class="icon fab fa-facebook"></i>
                 <a href="https://www.facebook.com/comfylifedesign/"
                    target="_blank">comfylifedesign</a>
@@ -42,6 +34,14 @@
                 <i class="icon fab fa-instagram"></i>
                 <a href="https://www.instagram.com/comfylife_design/"
                    target="_blank">comfylife_design</a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="contact-info__item">
+                <i class="icon far fa-envelope-open"></i>
+                <a href="mailto:kontakt@comfy-life.pl"
+                   target="_blank">kontakt@comfy-life.pl</a>
             </div>
         </div>
     </div>

@@ -2,15 +2,6 @@
 /**
  * Created by PhpStorm.
  * User: mrx
- * Date: 09.02.19
- * Time: 14:36
- */
-?>
-
-<?php
-/**
- * Created by PhpStorm.
- * User: mrx
  * Date: 23.03.19
  * Time: 22:50
  */
@@ -20,15 +11,8 @@
 $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
 $args = array(
     'post_type' => 'comfy-realization',
-    'posts_per_page' => 6,
+    'posts_per_page' => 12,
     'paged' => $paged,
-    'tax_query' => array(
-        array(
-            'taxonomy' => 'comfy-realization-category',
-            'field' => 'slug',
-            'terms' => 'the-best',
-        ),
-    ),
 );
 $query = new WP_Query($args);
 ?>
@@ -68,6 +52,11 @@ $query = new WP_Query($args);
         endwhile;
     endif;
     ?>
+    <div class="col-lg-12 d-flex mt-6 justify-content-center">
+        <?php
+        pagination_links($query);
+        ?>
+    </div>
 </div>
 
 <?php get_template_part('plugins/photoswipe') ?>
