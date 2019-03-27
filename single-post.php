@@ -57,8 +57,14 @@
 
         <section class="container">
             <div class="row">
-                <div class="col-xl-12 pb-5">
+                <div class="col-xl-12">
+                    <hr/>
+                </div>
+                <div class="col-xl-12">
                     <?php get_template_part('components/newsletter-bar'); ?>
+                </div>
+                <div class="col-xl-12">
+                    <hr/>
                 </div>
             </div>
         </section>

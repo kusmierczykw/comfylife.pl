@@ -46,21 +46,23 @@ $query = new WP_Query($args);
 
             <div class="col-xl-4 col-lg-3 col-md-4 col-6 realization__item"
                  data-photos='<?php echo json_encode($photos); ?>'>
-                <?php $thumbnail = get_the_post_thumbnail_url(null, 'medium'); ?>
-                <?php if ($thumbnail): ?>
-                    <img src="<?php echo $thumbnail; ?>" alt="<?php echo get_the_title(); ?>"/>
-                <?php else: ?>
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/sample_image.jpg"
-                         alt="<?php echo get_the_title(); ?>"/>
-                <?php endif; ?>
-                <div class="realization__item-wrapper d-none d-xl-flex">
-                    <div class="realization__item-title text-center"><?php echo get_the_title(); ?></div>
-                    <div class="realization__item-description text-center">
-                        <?php if(count($photos) != 0): ?>
-                            Kliknij, aby zobaczyć wizualizacje
-                        <?php else: ?>
-                            Brak wizualizacji do wyświetlenia
-                        <?php endif; ?>
+                <div class="img-crop">
+                    <?php $thumbnail = get_the_post_thumbnail_url(null, 'large'); ?>
+                    <?php if ($thumbnail): ?>
+                        <img src="<?php echo $thumbnail; ?>" alt="<?php echo get_the_title(); ?>"/>
+                    <?php else: ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/sample_image.jpg"
+                             alt="<?php echo get_the_title(); ?>"/>
+                    <?php endif; ?>
+                    <div class="realization__item-wrapper d-none d-xl-flex">
+                        <div class="realization__item-title text-center"><?php echo get_the_title(); ?></div>
+                        <div class="realization__item-description text-center">
+                            <?php if (count($photos) != 0): ?>
+                                Kliknij, aby zobaczyć wizualizacje
+                            <?php else: ?>
+                                Brak wizualizacji do wyświetlenia
+                            <?php endif; ?>
+                        </div>
                     </div>
                 </div>
             </div>

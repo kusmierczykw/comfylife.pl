@@ -75,15 +75,22 @@
 
 <section class="container">
     <div class="row">
-        <div class="col-xl-12 py-5">
+        <div class="col-xl-12 pt-5">
             <?php get_template_part('components/realizations'); ?>
+        </div>
+
+        <div class="col-xl-4 col-lg-6 ml-auto pt-2 pb-5">
+            <a href="<?php echo get_site_url(); ?>/portfolio/" class="btn btn-primary py-3 text-uppercase w-100">Zobacz więcej realizacji</a>
         </div>
     </div>
 </section>
 
 <section class="container">
     <div class="row">
-        <div class="col-xl-12 pb-5">
+        <div class="col-xl-12">
+            <hr/>
+        </div>
+        <div class="col-xl-12">
             <?php get_template_part('components/newsletter-bar'); ?>
         </div>
     </div>
@@ -91,8 +98,22 @@
 
 <section class="container short-contact">
     <div class="row">
-        <div class="col-xl-12 pb-5">
+        <div class="col-xl-12">
+            <hr/>
+        </div>
+        <div class="col-xl-12">
             <?php get_template_part('components/short-contact-info'); ?>
+        </div>
+    </div>
+</section>
+
+<section class="container short-contact-form">
+    <div class="row">
+        <div class="col-xl-12">
+            <hr/>
+        </div>
+        <div class="col-xl-12 pb-5">
+            <?php get_template_part('components/short-contact-form'); ?>
         </div>
     </div>
 </section>

@@ -7,9 +7,6 @@
  */
 ?>
 <div class="row align-items-center">
-    <div class="col-lg-12">
-        <hr/>
-    </div>
     <div class="col-md-12">
         <h2>Zapisz się do newslettera</h2>
     </div>
@@ -51,8 +48,5 @@
                 </div>
             </div>
         </form>
-    </div>
-    <div class="col-lg-12">
-        <hr/>
     </div>
 </div>

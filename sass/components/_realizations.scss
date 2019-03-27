@@ -22,19 +22,14 @@ $realization-description-font-weight: normal;
           opacity: 1;
         }
       }
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
     }
 
     &__item-wrapper {
       top: 0;
       left: 0;
+      margin: 0;
       opacity: 0;
-      width: calc(100% - #{$realization-description-padding});
+      width: 100%;
       height: 100%;
       display: flex;
       flex-wrap: wrap;
@@ -44,7 +39,6 @@ $realization-description-font-weight: normal;
       justify-content: center;
       transition: opacity $realization-description-animation-duration;
       padding: $realization-description-padding;
-      margin: 0 $realization-item-margin;
       color: $realization-description-text-color;
       background-color: $realization-description-background;
 

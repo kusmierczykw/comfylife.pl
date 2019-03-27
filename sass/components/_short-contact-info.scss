@@ -15,6 +15,13 @@ $short-contact-icon-margin-x: 16px;
 
       a {
         color: $short-contact-info-color;
+        text-decoration: none;
+      }
+    }
+
+    &__label {
+      &:hover{
+        text-decoration: underline;
       }
     }
   }
