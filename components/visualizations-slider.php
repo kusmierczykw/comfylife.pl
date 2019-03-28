@@ -8,25 +8,13 @@
 ?>
 
 <div class="owl-carousel owl-theme visualization-slider">
-    <div class="visualization-slider__item">
-        <img src="<?php echo get_template_directory_uri();?>/images/slider/slider_3.jpg" />
-    </div>
+    <?php $count = 7; ?>
 
-    <div class="visualization-slider__item">
-        <img src="<?php echo get_template_directory_uri();?>/images/slider/slider_2.jpg" />
-    </div>
-
-    <div class="visualization-slider__item">
-        <img src="<?php echo get_template_directory_uri();?>/images/slider/slider_4.jpg" />
-    </div>
-
-    <div class="visualization-slider__item">
-        <img src="<?php echo get_template_directory_uri();?>/images/slider/slider_5.jpg" />
-    </div>
-
-    <div class="visualization-slider__item">
-        <img src="<?php echo get_template_directory_uri();?>/images/slider/slider_1.jpg" />
-    </div>
+    <?php for($i = 1; $i <= $count; $i++): ?>
+        <div class="visualization-slider__item">
+            <img src="<?php echo get_template_directory_uri();?>/images/slider/<?php echo $i; ?>.jpg" />
+        </div>
+    <?php endfor; ?>
 </div>
 
 <script>

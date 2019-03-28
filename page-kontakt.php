@@ -11,38 +11,7 @@
     <div class="container h-100">
         <div class="row align-items-center h-100">
             <div class="col-lg-6 contact-form">
-                <form class="contact-form__container">
-                    <div class="form-group row align-items-center">
-                        <div class="col-lg-12 px-0">
-                            <label for="username" class="form-control-label">Imię i nazwisko</label>
-                            <input class="form-control mb-3 py-3" type="text" id="username">
-                        </div>
-
-                        <div class="col-lg-12 px-0">
-                            <label for="email" class="form-control-label">Adres e-mail</label>
-                            <input class="form-control mb-3 py-3" type="text" id="email">
-                        </div>
-
-                        <div class="col-lg-12 px-0">
-                            <label for="message" class="form-control-label">Treść wiadomości</label>
-                            <textarea class="form-control mb-3 py-3" id="message" rows="3" type="text"></textarea>
-                        </div>
-
-                        <div class="col-lg-12 px-0 privacy-policy">
-                            <input type="checkbox" id="privacy-policy">
-                            <label for="privacy-policy" class="privacy-policy-label">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer gravida erat
-                                condimentum ante aliquet efficitur. Nunc tincidunt nisi facilisis, congue tortor
-                                commodo, pretium quam. Ut ut sem augue.
-                            </label>
-
-                        </div>
-
-                        <div class="col-lg-12 px-0 text-right">
-                            <button type="submit" class="btn btn-primary py-3 px-5 mt-3">Wyślij</button>
-                        </div>
-                    </div>
-                </form>
+                <?php echo do_shortcode('[contact-form-7 id="98" title="Kontakt - zakładka" html_class="contact-form__container"]') ?>
             </div>
 
             <div class="col-lg-5 offset-lg-1 contact-info">

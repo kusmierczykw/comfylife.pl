@@ -6,34 +6,29 @@
  * Time: 20:49
  */
 ?>
+<?php
+$args = array(
+    'post_type' => 'comfy-opinion',
+    'posts_per_page' => 5,
+);
+$query = new WP_Query($args);
+?>
 
-<div class="owl-carousel owl-theme opinion__carousel">
-    <div class="opinion__item">
-        <div class="opinion__description">
-            Lekko, świeżo i bardzo na czasie! Comfy Life upiękni każde wnętrze! :)
-        </div>
+<?php if ($query->have_posts()) : ?>
+    <div class="owl-carousel owl-theme opinion__carousel">
+        <?php while ($query->have_posts()) : $query->the_post(); ?>
+            <div class="opinion__item">
+                <div class="opinion__description">
+                    <?php echo get_the_content(); ?>
+                </div>
 
-        <div class="opinion__user-name">
-            Ewa Piperzny
-        </div>
+                <div class="opinion__user-name">
+                    <?php echo get_the_title(); ?>
+                </div>
+            </div>
+        <?php endwhile; ?>
     </div>
-
-    <div class="opinion__item">
-        <div class="opinion__description">
-            Lekko, świeżo i bardzo na czasie! Comfy Life upiękni każde wnętrze! :)
-        </div>
-
-        <div class="opinion__user-name"></div>
-    </div>
-
-    <div class="opinion__item">
-        <div class="opinion__description">
-            Lekko, świeżo i bardzo na czasie! Comfy Life upiękni każde wnętrze! :)
-        </div>
-
-        <div class="opinion__user-name"></div>
-    </div>
-</div>
+<?php endif; ?>
 
 <script>
     $('.opinion__carousel').owlCarousel({

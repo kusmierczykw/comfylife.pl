@@ -38,14 +38,6 @@ function create_post_type()
         'title', 'editor', 'thumbnail',
     );
 
-    $comfy_realization_category_labels = array(
-        'name' => __('Kategorie realizacji'),
-        'add_new_item' => __('Dodaj nową kategorię'),
-        'not_found' => __('Brak wyników.'),
-        'edit_item' => __('Edytuj kategorię'),
-        'view_item' => __('Podgląd kategorię'),
-    );
-
     $comfy_realization_post_type_labels = array(
         'name' => __('Realizacje'),
         'singular_name' => __('Realizacje'),
@@ -55,11 +47,92 @@ function create_post_type()
         'new_item' => __('Nowa realizacja'),
         'all_items' => __('Wszystkie realizacje'),
         'view_item' => __('Przeglądaj realizacje'),
-        'search_items' => __('Wyszukaj realizację'),
+        'search_items' => __('Wyszukaj realizacje'),
         'not_found' => __('Brak wyników...'),
         'not_found_in_trash' => __('Brak wyników.'),
         'parent_item_colon' => '',
         'menu_name' => __('Realizacje')
+    );
+
+    $comfy_opinion_supports = array(
+        'title', 'editor',
+    );
+
+    $comfy_opinion_post_type_labels = array(
+        'name' => __('Opinie'),
+        'singular_name' => __('Opinie'),
+        'add_new' => __('Dodaj nową opinię'),
+        'add_new_item' => __('Dodaj nową opinię'),
+        'edit_item' => __('Edytuj opinię'),
+        'new_item' => __('Nowa opinię'),
+        'all_items' => __('Wszystkie opinie'),
+        'view_item' => __('Przeglądaj opinię'),
+        'search_items' => __('Wyszukaj opinie'),
+        'not_found' => __('Brak wyników...'),
+        'not_found_in_trash' => __('Brak wyników.'),
+        'parent_item_colon' => '',
+        'menu_name' => __('Opinie')
+    );
+
+    $comfy_faq_supports = array(
+        'title', 'editor',
+    );
+
+    $comfy_faq_post_type_labels = array(
+        'name' => __('FAQ'),
+        'singular_name' => __('FAQ'),
+        'add_new' => __('Dodaj nowe FAQ'),
+        'add_new_item' => __('Dodaj nowe FAQ'),
+        'edit_item' => __('Edytuj FAQ'),
+        'new_item' => __('Nowe FAQ'),
+        'all_items' => __('Wszystkie FAQ'),
+        'view_item' => __('Przeglądaj FAQ'),
+        'search_items' => __('Wyszukaj FAQ'),
+        'not_found' => __('Brak wyników...'),
+        'not_found_in_trash' => __('Brak wyników.'),
+        'parent_item_colon' => '',
+        'menu_name' => __('FAQ')
+    );
+
+    register_post_type('comfy-realization',
+        array(
+            'labels' => $comfy_realization_post_type_labels,
+            'public' => true,
+            'has_archive' => true,
+            'supports' => $comfy_realization_supports,
+        )
+    );
+
+    register_post_type('comfy-opinion',
+        array(
+            'labels' => $comfy_opinion_post_type_labels,
+            'public' => true,
+            'has_archive' => true,
+            'supports' => $comfy_opinion_supports,
+        )
+    );
+
+    register_post_type('comfy-faq',
+        array(
+            'labels' => $comfy_faq_post_type_labels,
+            'public' => true,
+            'has_archive' => true,
+            'supports' => $comfy_faq_supports,
+        )
+    );
+}
+
+// --------------------------------------------
+// Custom taxonomies
+// --------------------------------------------
+function create_taxonomy()
+{
+    $comfy_realization_category_labels = array(
+        'name' => __('Kategorie realizacji'),
+        'add_new_item' => __('Dodaj nową kategorię'),
+        'not_found' => __('Brak wyników.'),
+        'edit_item' => __('Edytuj kategorię'),
+        'view_item' => __('Podgląd kategorię'),
     );
 
     register_taxonomy(
@@ -72,16 +145,7 @@ function create_post_type()
         )
     );
     register_taxonomy_for_object_type('comfy-realization-category', 'comfy-realization');
-    register_post_type('comfy-realization',
-        array(
-            'labels' => $comfy_realization_post_type_labels,
-            'public' => true,
-            'has_archive' => true,
-            'supports' => $comfy_realization_supports,
-        )
-    );
 }
-
 // --------------------------------------------
 // Functions
 // --------------------------------------------
