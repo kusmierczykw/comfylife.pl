@@ -8,7 +8,7 @@
 ?>
 <?php get_template_part('layout/header'); ?>
 <section class="container-fluid contact-section">
-    <div class="container h-100">
+    <div class="container h-100 p-0">
         <div class="row align-items-center h-100">
             <div class="col-lg-6 contact-form">
                 <?php echo do_shortcode('[contact-form-7 id="98" title="Kontakt - zakładka" html_class="contact-form__container"]') ?>

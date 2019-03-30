@@ -35,7 +35,7 @@
 </section>
 
 <section class="container-fluid">
-    <div class="row py-6">
+    <div class="row py-5">
         <div class="col-lg-auto offset-xl-1">
             <div class="container">
                 <div class="row">

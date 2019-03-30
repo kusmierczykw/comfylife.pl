@@ -9,7 +9,7 @@
 <?php get_template_part('layout/header'); ?>
 
 <section class="container-fluid page-title">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/slider/slider_3.jpg" class="page-title__background"
+    <img src="<?php echo get_template_directory_uri(); ?>/images/offer/background.jpg" class="page-title__background"
          alt="">
 
     <div class="row align-items-center h-100">
@@ -29,7 +29,7 @@
 
 <section class="container faq">
     <div class="row">
-        <div class="col-xl-12 py-6">
+        <div class="col-xl-12 py-5">
             <div class="accordion" id="accordionExample">
                 <?php
                 $args = array(

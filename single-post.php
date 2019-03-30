@@ -37,7 +37,7 @@
         </section>
 
         <section class="container">
-            <div class="row py-6">
+            <div class="row py-5">
                 <div class="col-lg-12">
                     <div class="post__content">
                         <?php echo get_the_content(); ?>
@@ -45,7 +45,7 @@
                 </div>
             </div>
 
-            <div class="row pt-6 pb-5">
+            <div class="row pt-5 pb-5">
                 <div class="col-lg-6 text-center text-lg-right post__url left">
                     <?php previous_post_link('%link', '<i class="fas fa-angle-double-left"></i> Poprzedni post', TRUE); ?>
                 </div>

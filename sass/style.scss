@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&subset=latin-ext');
 @import url("https://use.fontawesome.com/releases/v5.7.1/css/all.css");
-@import "bootstrap/scss/bootstrap.scss";
 @import "variables";
 @import "colors";
 @import "buttons";
@@ -156,7 +155,7 @@ $contact-form-height: 100vh;
   margin: 0;
   background: url(../images/contact.jpg) bottom center fixed;
   background-size: cover;
-  height: $contact-form-height;
+  min-height: $contact-form-height;
 
   .contact-info {
     &__item {
@@ -301,4 +300,9 @@ $post-title-text-transform: uppercase;
       }
     }
   }
+}
+
+body{
+  position: relative;
+  z-index: 2;
 }

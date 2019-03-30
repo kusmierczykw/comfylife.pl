@@ -8,15 +8,6 @@
 ?>
 
 <?php
-/**
- * Created by PhpStorm.
- * User: mrx
- * Date: 23.03.19
- * Time: 22:50
- */
-?>
-
-<?php
 $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
 $args = array(
     'post_type' => 'comfy-realization',
@@ -51,16 +42,16 @@ $query = new WP_Query($args);
                     <?php if ($thumbnail): ?>
                         <img src="<?php echo $thumbnail; ?>" alt="<?php echo get_the_title(); ?>"/>
                     <?php else: ?>
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/sample_image.jpg"
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/samples/sample_image.jpg"
                              alt="<?php echo get_the_title(); ?>"/>
                     <?php endif; ?>
                     <div class="realization__item-wrapper d-none d-xl-flex">
                         <div class="realization__item-title text-center"><?php echo get_the_title(); ?></div>
                         <div class="realization__item-description text-center">
                             <?php if (count($photos) != 0): ?>
-                                Kliknij, aby zobaczyć wizualizacje
+                                Kliknij, aby zobaczyć realizację
                             <?php else: ?>
-                                Brak wizualizacji do wyświetlenia
+                                Brak realizacji do wyświetlenia
                             <?php endif; ?>
                         </div>
                     </div>

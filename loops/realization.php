@@ -35,16 +35,16 @@ $query = new WP_Query($args);
                     <?php if ($thumbnail): ?>
                         <img src="<?php echo $thumbnail; ?>" alt="<?php echo get_the_title(); ?>"/>
                     <?php else: ?>
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/sample_image.jpg"
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/samples/sample_image.jpg"
                              alt="<?php echo get_the_title(); ?>"/>
                     <?php endif; ?>
                     <div class="realization__item-wrapper d-none d-xl-flex">
                         <div class="realization__item-title text-center"><?php echo get_the_title(); ?></div>
                         <div class="realization__item-description text-center">
                             <?php if (count($photos) != 0): ?>
-                                Kliknij, aby zobaczyć wizualizacje
+                                Kliknij, aby zobaczyć realizację
                             <?php else: ?>
-                                Brak wizualizacji do wyświetlenia
+                                Brak realizacji do wyświetlenia
                             <?php endif; ?>
                         </div>
                     </div>
@@ -54,7 +54,7 @@ $query = new WP_Query($args);
         endwhile;
     endif;
     ?>
-    <div class="col-lg-12 d-flex mt-6 justify-content-center">
+    <div class="col-lg-12 d-flex mt-5 justify-content-center">
         <?php
         pagination_links($query);
         ?>

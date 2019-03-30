@@ -18,6 +18,7 @@ add_action('init', 'register_navbar_menu');
 add_action('wp_ajax_load_posts_by_ajax', 'load_posts_by_ajax_callback');
 add_action('wp_ajax_nopriv_load_posts_by_ajax', 'load_posts_by_ajax_callback');
 add_action('init', 'create_post_type');
+add_action('init', 'create_taxonomy');
 
 // --------------------------------------------
 // Plugins installation
@@ -94,6 +95,26 @@ function create_post_type()
         'menu_name' => __('FAQ')
     );
 
+    $comfy_visualization_supports = array(
+        'title', 'thumbnail'
+    );
+
+    $comfy_visualization_post_type_labels = array(
+        'name' => __('Wizualizacje'),
+        'singular_name' => __('Wizualizacje'),
+        'add_new' => __('Dodaj nową wizualizację'),
+        'add_new_item' => __('Dodaj nową wizualizację'),
+        'edit_item' => __('Edytuj wizualizację'),
+        'new_item' => __('Nowa wizualiacja'),
+        'all_items' => __('Wszystkie wizualizacje'),
+        'view_item' => __('Przeglądaj wizualizacje'),
+        'search_items' => __('Wyszukaj wizualizację'),
+        'not_found' => __('Brak wyników...'),
+        'not_found_in_trash' => __('Brak wyników.'),
+        'parent_item_colon' => '',
+        'menu_name' => __('Wizualizacje')
+    );
+
     register_post_type('comfy-realization',
         array(
             'labels' => $comfy_realization_post_type_labels,
@@ -118,6 +139,15 @@ function create_post_type()
             'public' => true,
             'has_archive' => true,
             'supports' => $comfy_faq_supports,
+        )
+    );
+
+    register_post_type('comfy-visualization',
+        array(
+            'labels' => $comfy_visualization_post_type_labels,
+            'public' => true,
+            'has_archive' => true,
+            'supports' => $comfy_visualization_supports,
         )
     );
 }
@@ -146,6 +176,7 @@ function create_taxonomy()
     );
     register_taxonomy_for_object_type('comfy-realization-category', 'comfy-realization');
 }
+
 // --------------------------------------------
 // Functions
 // --------------------------------------------

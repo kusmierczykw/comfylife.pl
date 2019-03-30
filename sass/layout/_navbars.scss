@@ -20,7 +20,8 @@ $navbar-inversed-item-hover-color: $black-color;
 $navbar-inversed-border-color: $black-color;
 $navbar-inversed-social-media-border-color: $navbar-inversed-item-text-color;
 $navbar-inversed-social-media-text-color: $navbar-inversed-item-text-color;
-$navbar-brand-image-height: 30px;
+$navbar-brand-height: 60px;
+$navbar-brand-image-height: 100%;
 $navbar-social-media-border-color: $navbar-item-text-color;
 $navbar-social-media-text-color: $navbar-item-text-color;
 $navbar-social-media-margin-x: 16px;
@@ -32,7 +33,21 @@ $navbar-social-media-item-padding-x: 0.5em;
   box-shadow: 0 0 6px $navbar-border-color;
 
   &-brand {
-    display: none;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    height: $navbar-brand-height;
+
+
+    &__logo {
+      &-inversed {
+        display: block;
+      }
+
+      &-normal {
+        display: none;
+      }
+    }
 
     img {
       height: $navbar-brand-image-height;
@@ -121,16 +136,25 @@ $navbar-social-media-item-padding-x: 0.5em;
 
   &__collapsed {
     padding: $navbar-collapsed-padding;
-
-    .navbar-brand {
-      display: block;
-    }
   }
 
   &__inversed {
     box-shadow: 0 0 6px 0 $navbar-inversed-border-color;
     background-color: $navbar-inversed-background;
     .navbar {
+
+      &-brand {
+        &__logo {
+          &-inversed {
+            display: none;
+          }
+
+          &-normal {
+            display: block;
+          }
+        }
+      }
+
       &-nav {
         li {
           a {
@@ -157,7 +181,6 @@ $navbar-social-media-item-padding-x: 0.5em;
     }
   }
 }
-
 
 $navbar-toggler-border-color: $white-color;
 $navbar-toggler-icon-color: $navbar-toggler-border-color;

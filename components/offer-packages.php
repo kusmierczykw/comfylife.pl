@@ -9,7 +9,7 @@
 <div class="offer__packages" id="offer-packages">
     <div class="offer__packages-view">
         <div class="offer__package-item active"
-             data-background-url="<?php echo get_template_directory_uri(); ?>/images/strona_gotowa_15.jpg"
+             data-background-url="<?php echo get_template_directory_uri(); ?>/images/offer/background.jpg"
              data-link="#pakiet-podstawowy">
             <div class="offer__package-item-wrapper">
                 <h3 class="text-center text-uppercase font-weight-bold mb-5">Pakiet podstawowy</h3>
@@ -27,7 +27,7 @@
         </div>
 
         <div class="offer__package-item"
-             data-background-url="<?php echo get_template_directory_uri(); ?>/images/strona_gotowa_15.jpg"
+             data-background-url="<?php echo get_template_directory_uri(); ?>/images/offer/background.jpg"
              data-link="#pakiet-kompleksowy">
 
             <div class="offer__package-item-wrapper">
@@ -49,7 +49,7 @@
         </div>
 
         <div class="offer__package-item"
-             data-background-url="<?php echo get_template_directory_uri(); ?>/images/strona_gotowa_15.jpg"
+             data-background-url="<?php echo get_template_directory_uri(); ?>/images/offer/background.jpg"
              data-link="#pakiet-po-klucz">
 
             <div class="offer__package-item-wrapper">

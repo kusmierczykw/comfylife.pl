@@ -8,7 +8,7 @@
 ?>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <div class="card mb-6 post">
+    <div class="card mb-5 post">
         <div class="row no-gutters">
             <div class="col-md-12">
                 <?php if (!!get_the_post_thumbnail_url(null, 'large')): ?>
