@@ -16,8 +16,8 @@
 </section>
 
 <section class="container" id="o-nas">
-    <div class="row about-us">
-        <div class="col-xl-12 py-5">
+    <div class="row about-us pt-5">
+        <div class="col-xl-12 pt-5">
             <!-- Skecja z krótkim opisem -->
             <div class="about-us__description">
                 <p>
@@ -29,8 +29,10 @@
                 </p>
             </div>
         </div>
+    </div>
 
-        <div class="col-xl-12">
+    <div class="row about-us pt-5">
+        <div class="col-xl-12 pt-5">
             <!-- Sekcja ze zdjęciami oraz podpisami -->
             <div class="row about-us__photos align-items-start">
                 <div class="col-xl col-lg-3 col-sm-6 about-us__single-photo">
@@ -50,16 +52,16 @@
         </div>
     </div>
     <div class="row opinion">
-        <div class="col-xl-10 col-lg-12 offset-xl-1 py-5">
+        <div class="col-xl-10 col-lg-12 offset-xl-1 pt-5">
             <?php get_template_part('components/opinion-carousel'); ?>
         </div>
     </div>
 </section>
 
 <section class="container" id="oferta">
-    <div class="row offer">
-        <div class="col-xl-12">
-            <div class="offer__description py-5">
+    <div class="row offer pt-5">
+        <div class="col-xl-12 pt-5">
+            <div class="offer__description">
                 <p>
                     Aby sprostać oczekiwaniom naszych klientów, przygotowałyśmy 3 pakiety naszych usług, ale jeśli
                     oczekujesz czegoś innego, to nie ma problemu - przygotujemy dla Ciebie ofertę indywidualną.
@@ -67,14 +69,14 @@
             </div>
         </div>
 
-        <div class="col-xl-12 py-5">
+        <div class="col-xl-12 pt-5">
             <?php get_template_part('components/offer-packages'); ?>
         </div>
     </div>
 </section>
 
 <section class="container">
-    <div class="row">
+    <div class="row pt-5">
         <div class="col-xl-12 pt-5">
             <?php get_template_part('components/realizations'); ?>
         </div>

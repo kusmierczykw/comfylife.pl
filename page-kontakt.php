@@ -8,13 +8,13 @@
 ?>
 <?php get_template_part('layout/header'); ?>
 <section class="container-fluid contact-section">
-    <div class="container h-100 p-0">
-        <div class="row align-items-center h-100">
-            <div class="col-lg-6 contact-form">
+    <div class="container h-100 px-0">
+        <div class="row align-items-center h-100 p-5">
+            <div class="col-lg-6 contact-form order-2 order-lg-0 pt-5">
                 <?php echo do_shortcode('[contact-form-7 id="98" title="Kontakt - zakładka" html_class="contact-form__container"]') ?>
             </div>
 
-            <div class="col-lg-5 offset-lg-1 contact-info">
+            <div class="col-lg-5 offset-lg-1 contact-info order-1 pt-5">
                 <address class="p-3">
                     <div class="contact-info__item">
                         <i class="fa fa-phone"></i>721-049-249 (Agata)

@@ -151,16 +151,18 @@ $contact-form-container-background: $white-color;
 $contact-form-container-padding: 32px;
 $contact-form-container-box-shadow: 0 0 5px 2px rgba(0, 0, 0, .1);
 $contact-form-height: 100vh;
+$contact-form-item-font-size: 30px;
 .contact-section {
   margin: 0;
   background: url(../images/contact.jpg) bottom center fixed;
   background-size: cover;
   min-height: $contact-form-height;
+  height: $contact-form-height;
 
   .contact-info {
     &__item {
       color: white;
-      font-size: 30px;
+      font-size: $contact-form-item-font-size;
 
       i {
         padding-right: 16px;

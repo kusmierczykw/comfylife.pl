@@ -22,7 +22,7 @@ $query = new WP_Query($args);
                     <?php echo get_the_content(); ?>
                 </div>
 
-                <div class="opinion__user-name">
+                <div class="opinion__user-name mt-3">
                     <?php echo get_the_title(); ?>
                 </div>
             </div>
