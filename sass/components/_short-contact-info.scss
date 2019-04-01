@@ -6,6 +6,7 @@ $short-contact-info-color: $black-color;
 $short-contact-info-item-link-font-weight: bold;
 
 $short-contact-icon-margin-x: 16px;
+$short-contact-icon-background: $primary-color-dark;
 
 .short-contact-info {
   .contact-info {
@@ -20,14 +21,14 @@ $short-contact-icon-margin-x: 16px;
     }
 
     &__label {
-      &:hover{
+      &:hover {
         text-decoration: underline;
       }
     }
   }
 
   .icon {
-    background: $primary-color-dark;
+    background: $short-contact-icon-background;
     margin-right: $short-contact-icon-margin-x;
   }
 }

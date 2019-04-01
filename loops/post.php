@@ -19,11 +19,11 @@
 
             <div class="col-md-12">
                 <div class="card-body">
-                    <h4 class="card-title">
+                    <h5 class="card-title">
                         <div class="post__title">
                             <?php echo get_the_title(); ?>
                         </div>
-                    </h4>
+                    </h5>
                     <p class="card-text">
                         <small class="text-muted post__date">
                             <?php echo get_the_date('d/m/Y'); ?>
@@ -46,4 +46,6 @@
         </div>
     </div>
 <?php endwhile; ?>
+<?php else: ?>
+    <p>Brak postów do wyświetlenia. . .</p>
 <?php endif; ?>

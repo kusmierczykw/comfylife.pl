@@ -50,15 +50,18 @@ $query = new WP_Query($args);
                     </div>
                 </div>
             </div>
-        <?php
-        endwhile;
-    endif;
-    ?>
-    <div class="col-lg-12 d-flex mt-5 justify-content-center">
-        <?php
-        pagination_links($query);
-        ?>
-    </div>
+        <?php endwhile; ?>
+    <?php else: ?>
+        <p>Brak postów do wyświetlenia. . .</p>
+    <?php endif; ?>
+
+    <?php if ($query->have_posts()) : ?>
+        <div class="col-lg-12 d-flex mt-5 justify-content-center">
+            <?php
+            pagination_links($query);
+            ?>
+        </div>
+    <?php endif; ?>
 </div>
 
 <?php get_template_part('plugins/photoswipe') ?>

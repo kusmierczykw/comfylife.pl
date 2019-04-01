@@ -57,10 +57,10 @@ $query = new WP_Query($args);
                     </div>
                 </div>
             </div>
-        <?php
-        endwhile;
-    endif;
-    ?>
+        <?php endwhile; ?>
+        <?php else: ?>
+        <p>Brak postów do wyświetlenia. . .</p>
+    <?php endif; ?>
 </div>
 
 <?php get_template_part('plugins/photoswipe') ?>

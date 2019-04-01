@@ -41,12 +41,13 @@
 
 <nav class="navbar navbar-expand-lg fixed-top" role="navigation">
     <div class="container">
-        <a class="navbar-brand" href="<?php echo get_page_link(); ?>">
+        <a class="navbar-brand" href="<?php echo get_site_url(); ?>">
             <img src="<?php echo get_template_directory_uri(); ?>/images/logo/logo.png" alt="Comfy Life Logo"
                  class="navbar-brand__logo-normal"/>
             <img src="<?php echo get_template_directory_uri(); ?>/images/logo/logo-inversed.png" alt="Comfy Life Logo"
                  class="navbar-brand__logo-inversed"/>
         </a>
+
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,13 +66,19 @@
         ));
         ?>
 
-        <div class="navbar-social-media d-none d-lg-block">
+        <div class="navbar-action-section d-none d-lg-block">
             <a href="https://www.facebook.com/comfylifedesign/" target="_blank">
                 <i class="fab fa-facebook"></i>
             </a>
 
             <a href="https://www.instagram.com/comfylife_design/" target="_blank">
                 <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+
+        <div class="navbar-action-section d-none d-lg-block">
+            <a href="https://www.instagram.com/comfylife_design/" target="_blank">
+                <i class="fas fa-search"></i>
             </a>
         </div>
     </div>

@@ -157,7 +157,6 @@ $contact-form-item-font-size: 30px;
   background: url(../images/contact.jpg) bottom center fixed;
   background-size: cover;
   min-height: $contact-form-height;
-  height: $contact-form-height;
 
   .contact-info {
     &__item {
@@ -191,7 +190,7 @@ $page-title-full-height: 100vh;
 $page-title-height: 50vh;
 $page-title-text-color: $white-color;
 $page-title-header-font-size: 30px;
-$page-title-header-font-weight: 700;
+$page-title-header-font-weight: normal;
 $page-title-mask-background-color: rgba(0, 0, 0, .5);
 $page-title-separator-background-color: $white-color;
 $page-title-separator-width: 70%;
@@ -222,6 +221,7 @@ $page-title-paragraph-font-size: 16px;
     font-weight: $page-title-header-font-weight;
     font-size: $page-title-header-font-size;
     text-transform: $page-title-text-transform;
+    line-height: 1.5;
   }
 
   p {

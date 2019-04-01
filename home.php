@@ -36,30 +36,25 @@
 
 <section class="container-fluid">
     <div class="row py-5">
-        <div class="col-lg-auto offset-xl-1">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-9 offset-lg-3 mx-auto">
-                        <div class=" posts">
-                            <?php get_template_part('loops/post'); ?>
-                        </div>
-                        <div id="inifiniteLoader" class="text-center mt-5 mb-5" style="display: none;">
-                            <i class="fas fa-2x fa-spinner fa-spin"></i>
-                        </div>
+        <div class="col-xl-8 offset-xl-1">
+            <div class="row">
+                <div class="col-xl-8 col-md-12 mx-auto">
+                    <div class=" posts">
+                        <?php get_template_part('loops/post'); ?>
+                    </div>
+                    <div id="inifiniteLoader" class="text-center mt-5 mb-5" style="display: none;">
+                        <i class="fas fa-2x fa-spinner fa-spin"></i>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg pr-0">
-            <div class="position-sticky" style="top: 65px;">
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/strona_gotowa_07.jpg"
-                         class="img-fluid"/>
-                </div>
 
-                <div class="text-center mt-3">
-                    <h2>Popularne posty</h2>
-                    <p>Trwają pracę nad tą sekcją...</p>
+        <div class="col-xl pr-0 d-none d-xl-block">
+            <?php get_template_part('components/short-about-us'); ?>
+
+            <div class="position-sticky" style="top: 80px;">
+                <div class="mt-5">
+                    <?php get_template_part('components/popular-posts'); ?>
                 </div>
             </div>
         </div>

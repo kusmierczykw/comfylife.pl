@@ -1,0 +1,60 @@
+@import "../variables";
+@import "../colors";
+
+$short-about-us-info-font-size: $font-size-xl;
+$short-about-us-info-text-color: $white-color;
+$short-about-us-info-text-transform: uppercase;
+$short-about-us-info-link-font-size: $font-size-sm;
+$short-about-us-info-link-hover-icon-margin-x: 10px;
+$short-about-us-info-link-icon-margin-x: 5px;
+$short-about-us-info-link-icon-transition: 300ms;
+
+$short-about-us-info-mask-background: rgba($black-color, 0.3);
+.short-about-us {
+  position: relative;
+  &__photo {
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+  }
+
+  &__info {
+    bottom: 0;
+    width: 100%;
+    font-size: $short-about-us-info-font-size;
+    color: $short-about-us-info-text-color;
+    text-transform: $short-about-us-info-text-transform;
+    background: $short-about-us-info-mask-background;
+  }
+
+  &__link,
+  &__label {
+    font-weight: bold;
+    color: inherit;
+  }
+
+  &__label {
+
+  }
+
+  &__link {
+    font-size: $short-about-us-info-link-font-size;
+
+    .fa {
+      margin-left: $short-about-us-info-link-icon-margin-x;
+      transition: $short-about-us-info-link-icon-transition
+    }
+
+    &:hover {
+      color: inherit;
+      text-decoration: none;
+
+      .fa {
+        margin-left: $short-about-us-info-link-hover-icon-margin-x;
+      }
+    }
+  }
+}
