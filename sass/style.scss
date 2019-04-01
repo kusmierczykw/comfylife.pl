@@ -273,6 +273,7 @@ $post-title-text-transform: uppercase;
 
   &__title {
     text-transform: $post-title-text-transform;
+    line-height: 1.5;
   }
 
   &__excerpt,
