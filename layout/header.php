@@ -28,11 +28,11 @@
     <link href="<?php echo get_template_directory_uri(); ?>/css/media-queries.css?v=<?php echo current_time('timestamp', 0); ?>"
           type="text/css" rel="stylesheet"/>
 
-    <script src="<?php echo get_template_directory_uri(); ?>/assets/libraries/jquery/dist/jquery.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/assets/libraries/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/assets/libraries/owl.carousel/dist/owl.carousel.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/assets/libraries/photoswipe/dist/photoswipe.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/assets/libraries/photoswipe/dist/photoswipe-ui-default.min.js"></script>
+<!--    <script src="--><?php //echo get_template_directory_uri(); ?><!--/assets/libraries/jquery/dist/jquery.min.js"></script>-->
+<!--    <script src="--><?php //echo get_template_directory_uri(); ?><!--/assets/libraries/bootstrap/dist/js/bootstrap.min.js"></script>-->
+<!--    <script src="--><?php //echo get_template_directory_uri(); ?><!--/assets/libraries/owl.carousel/dist/owl.carousel.min.js"></script>-->
+<!--    <script src="--><?php //echo get_template_directory_uri(); ?><!--/assets/libraries/photoswipe/dist/photoswipe.min.js"></script>-->
+<!--    <script src="--><?php //echo get_template_directory_uri(); ?><!--/assets/libraries/photoswipe/dist/photoswipe-ui-default.min.js"></script>-->
     <?php wp_head(); ?>
 </head>
 <body>

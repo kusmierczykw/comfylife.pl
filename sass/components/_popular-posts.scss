@@ -15,7 +15,6 @@ $popular-post-order-number-font-weight: bold;
 $popular-post-item-margin-y: $popular-post-order-number-margin-x;
 .popular-posts {
   .popular-post {
-
     &__list {
       margin: 0;
       padding: 0;
@@ -33,7 +32,7 @@ $popular-post-item-margin-y: $popular-post-order-number-margin-x;
       text-transform: $popular-post-link-text-transform;
       color: $popular-post-link-text-color;
 
-      &:hover{
+      &:hover {
         color: $popular-post-link-hover-text-color;
       }
     }

@@ -74,6 +74,6 @@
     </div>
 </section>
 
-<script src="<?php echo get_template_directory_uri(); ?>/js/faq-accordions.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/faq-accordions.js?v=<?php echo current_time('timestamp', 0); ?>"></script>
 
 <?php get_template_part('layout/footer'); ?>

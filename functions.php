@@ -20,6 +20,7 @@ add_action('wp_ajax_nopriv_load_posts_by_ajax', 'load_posts_by_ajax_callback');
 add_action('init', 'create_post_type');
 add_action('init', 'create_taxonomy');
 
+add_action('wp_enqueue_scripts', 'comfy_enqueue_script');
 // --------------------------------------------
 // Plugins installation
 // --------------------------------------------
@@ -234,4 +235,23 @@ function pagination_links($query = null)
         }
         echo '</ul>';
     }
+}
+
+// --------------------------------------------
+// Init scripts
+// --------------------------------------------
+function comfy_enqueue_script()
+{
+    // In header
+    wp_enqueue_script('jquery-js', get_template_directory_uri() . '/assets/libraries/jquery/dist/jquery.min.js', false);
+    wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/libraries/bootstrap/dist/js/bootstrap.min.js', array('jquery-js'));
+    wp_enqueue_script('owl-carousel-js', get_template_directory_uri() . '/assets/libraries/owl.carousel/dist/owl.carousel.min.js', array('jquery-js'));
+    wp_enqueue_script('photoswipe-js', get_template_directory_uri() . '/assets/libraries/photoswipe/dist/photoswipe.min.js', array('jquery-js'));
+    wp_enqueue_script('photoswipe-ui-js', get_template_directory_uri() . '/assets/libraries/photoswipe/dist/photoswipe-ui-default.min.js', array('jquery-js', 'photoswipe-js'));
+
+    // In footer
+    wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js', array('jquery-js'), false, true);
+    if (is_home()):
+        wp_enqueue_script('blog', get_template_directory_uri() . '/js/blog.js', array('script'), false, true);
+    endif;
 }

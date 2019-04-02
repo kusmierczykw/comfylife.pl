@@ -49,11 +49,14 @@
             </div>
         </div>
 
-        <div class="col-xl pr-0 d-none d-xl-block">
+        <div class="col-xl px-0 d-none d-xl-block">
             <?php get_template_part('components/short-about-us'); ?>
 
-            <div class="position-sticky" style="top: 80px;">
-                <div class="mt-5">
+            <div class="position-sticky" id="flow-sidebar">
+                <div class="pt-2">
+                    <?php get_template_part('components/popular-posts'); ?>
+                </div>
+                <div class="pt-5">
                     <?php get_template_part('components/popular-posts'); ?>
                 </div>
             </div>
@@ -96,3 +99,4 @@
     });
 </script>
 <?php get_template_part('layout/footer'); ?>
+
