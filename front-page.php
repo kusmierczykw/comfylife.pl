@@ -82,7 +82,7 @@
         </div>
 
         <div class="col-xl-4 col-lg-6 ml-auto pt-2 pb-5">
-            <a href="<?php echo get_site_url(); ?>/portfolio/" class="btn btn-primary py-3 text-uppercase w-100">
+            <a href="<?php echo get_site_url(); ?>/portfolio" class="btn btn-primary py-3 text-uppercase w-100">
                 Zobacz więcej realizacji
             </a>
         </div>

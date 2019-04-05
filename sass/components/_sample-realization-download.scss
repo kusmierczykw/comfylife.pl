@@ -1,0 +1,59 @@
+@import "../variables";
+@import "../colors";
+
+$sample-realization-download-mask-background: rgba($black-color, 0.3);
+$sample-realization-download-box-shadow: rgba($black-color, 0.3);
+$sample-realization-download-color: $white-color;
+$sample-realization-download-line-height: 1.4;
+
+$sample-realization-download__label-link-color: $white-color;
+$sample-realization-download__label-link-hover-color: $white-color;
+$sample-realization-download__content-font-size: 28px;
+
+.sample-realization-download {
+  position: relative;
+
+  &__image {
+    img {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      object-fit: cover;
+      position: absolute;
+    }
+
+    &:before {
+      top: 0;
+      left: 0;
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: $sample-realization-download-mask-background;
+    }
+  }
+
+  &__label {
+    &-link {
+      text-decoration: none;
+      color: $sample-realization-download__label-link-color;
+      border-bottom: 1px solid $sample-realization-download__label-link-color;
+
+      &:hover {
+        color: $sample-realization-download__label-link-hover-color;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__content {
+    text-transform: uppercase;
+    color: $sample-realization-download-color;
+    line-height: $sample-realization-download-line-height;
+    position: relative;
+    z-index: 1;
+    font-size: $sample-realization-download__content-font-size;
+  }
+}

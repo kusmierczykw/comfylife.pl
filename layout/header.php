@@ -27,12 +27,6 @@
           type="text/css" rel="stylesheet"/>
     <link href="<?php echo get_template_directory_uri(); ?>/css/media-queries.css?v=<?php echo current_time('timestamp', 0); ?>"
           type="text/css" rel="stylesheet"/>
-
-<!--    <script src="--><?php //echo get_template_directory_uri(); ?><!--/assets/libraries/jquery/dist/jquery.min.js"></script>-->
-<!--    <script src="--><?php //echo get_template_directory_uri(); ?><!--/assets/libraries/bootstrap/dist/js/bootstrap.min.js"></script>-->
-<!--    <script src="--><?php //echo get_template_directory_uri(); ?><!--/assets/libraries/owl.carousel/dist/owl.carousel.min.js"></script>-->
-<!--    <script src="--><?php //echo get_template_directory_uri(); ?><!--/assets/libraries/photoswipe/dist/photoswipe.min.js"></script>-->
-<!--    <script src="--><?php //echo get_template_directory_uri(); ?><!--/assets/libraries/photoswipe/dist/photoswipe-ui-default.min.js"></script>-->
     <?php wp_head(); ?>
 </head>
 <body>
@@ -77,9 +71,11 @@
         </div>
 
         <div class="navbar-action-section d-none d-lg-block">
-            <a href="https://www.instagram.com/comfylife_design/" target="_blank">
+            <a href="#" id="search-button-toggler">
                 <i class="fas fa-search"></i>
             </a>
         </div>
     </div>
 </nav>
+
+<?php get_template_part('components/search-bar'); ?>

@@ -73,7 +73,7 @@ function create_post_type()
         'not_found' => __('Brak wyników...'),
         'not_found_in_trash' => __('Brak wyników.'),
         'parent_item_colon' => '',
-        'menu_name' => __('Opinie')
+        'menu_name' => __('Opinie'),
     );
 
     $comfy_faq_supports = array(
@@ -120,6 +120,7 @@ function create_post_type()
         array(
             'labels' => $comfy_realization_post_type_labels,
             'public' => true,
+            'menu_icon' => 'dashicons-desktop',
             'has_archive' => true,
             'supports' => $comfy_realization_supports,
         )
@@ -129,6 +130,7 @@ function create_post_type()
         array(
             'labels' => $comfy_opinion_post_type_labels,
             'public' => true,
+            'menu_icon' => 'dashicons-smiley',
             'has_archive' => true,
             'supports' => $comfy_opinion_supports,
         )
@@ -138,6 +140,7 @@ function create_post_type()
         array(
             'labels' => $comfy_faq_post_type_labels,
             'public' => true,
+            'menu_icon' => 'dashicons-lightbulb',
             'has_archive' => true,
             'supports' => $comfy_faq_supports,
         )
@@ -147,6 +150,7 @@ function create_post_type()
         array(
             'labels' => $comfy_visualization_post_type_labels,
             'public' => true,
+            'menu_icon' => 'dashicons-format-gallery',
             'has_archive' => true,
             'supports' => $comfy_visualization_supports,
         )

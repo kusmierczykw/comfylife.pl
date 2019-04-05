@@ -53,8 +53,8 @@
             <?php get_template_part('components/short-about-us'); ?>
 
             <div class="position-sticky" id="flow-sidebar">
-                <div class="pt-2">
-                    <?php get_template_part('components/popular-posts'); ?>
+                <div>
+                    <?php get_template_part('components/sample-realization-download'); ?>
                 </div>
                 <div class="pt-5">
                     <?php get_template_part('components/popular-posts'); ?>
