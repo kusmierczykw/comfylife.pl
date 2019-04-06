@@ -305,7 +305,12 @@ $post-title-text-transform: uppercase;
   }
 }
 
-body{
+$search-section-background: $secondary-color;
+.search-section {
+  background: $search-section-background;
+}
+
+body {
   position: relative;
   z-index: 2;
 }

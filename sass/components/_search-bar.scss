@@ -3,71 +3,30 @@
 
 $search-bar-background: $secondary-color;
 $search-bar-box-shadow: 0 0 5px 2px rgba($black-color, 0.1);
-$search-bar-title: $white-color;
 $search-bar-close-button-padding-x: 20px;
 $search-bar-close-button-padding-y: 17px;
 $search-bar-close-button-color: $white-color;
-$search-bar-submit-button-color: $black-color;
-$search-bar-submit-button-width: 64px;
+$search-bar-z-index: 2000;
+$search-bar-logo-height: 140px;
+$search-bar-title: $white-color;
 .search-bar {
-  width: 100%;
-  height: 50%;
-  z-index: 2000;
+  left: 0;
+  top: 0;
+  z-index: $search-bar-z-index;
   flex-wrap: wrap;
   position: fixed;
   align-items: center;
   background: $search-bar-background;
   box-shadow: $search-bar-box-shadow;
+  display: none;
 
-  // Stany paska wyszukiwarki
-  &.close {
-    display: none;
-  }
-
-  &.open {
-    display: flex;
-  }
-
-  // Elementy
   &__logo {
     top: 0;
-    height: 140px;
+    height: $search-bar-logo-height;
   }
 
   &__title {
     color: $search-bar-title;
-  }
-
-  .form-group {
-    position: relative;
-  }
-
-  .form-control {
-    padding-right: $search-bar-submit-button-width;
-  }
-
-  // Przyciski
-
-  .btn {
-    &:focus {
-      outline: none;
-      box-shadow: none;
-    }
-  }
-
-  &__submit-button {
-    top: 0;
-    right: 0;
-    padding: 0;
-    height: 100%;
-    position: absolute;
-    text-align: center;
-    color: $search-bar-submit-button-color;
-    width: $search-bar-submit-button-width;
-
-    &:hover {
-      color: $search-bar-submit-button-color;
-    }
   }
 
   &__close-button {
@@ -81,6 +40,12 @@ $search-bar-submit-button-width: 64px;
     justify-content: center;
     color: $search-bar-close-button-color;
     padding: $search-bar-close-button-padding-y $search-bar-close-button-padding-x;
+    z-index: $search-bar-z-index + 1;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
 
     &:hover {
       color: $search-bar-close-button-color;

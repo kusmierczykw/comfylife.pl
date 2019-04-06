@@ -29,8 +29,8 @@
           type="text/css" rel="stylesheet"/>
     <?php wp_head(); ?>
 </head>
-<body>
 
+<body>
 <?php get_template_part('components/social-media-bar'); ?>
 
 <nav class="navbar navbar-expand-lg fixed-top" role="navigation">
@@ -77,5 +77,4 @@
         </div>
     </div>
 </nav>
-
 <?php get_template_part('components/search-bar'); ?>

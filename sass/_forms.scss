@@ -1,9 +1,13 @@
+@import "colors";
+
 $form-control-padding-x: 1em;
 $form-control-padding-y: 1em;
 $form-control-border: 1px solid rgba(0, 0, 0, 0.4);
 $form-control-height: 48px;
 $form-control-label-font-size: 14px;
 $form-control-label-text-transform: uppercase;
+$form-control-color: rgba($black-color, 0.7);
+$form-control-focus-border-color: rgba($black-color, 1);
 $contact-form-privacy-policy-checkbox-margin-x: 4px;
 $contact-form-privacy-policy-checkbox-height: 16px;
 $contact-form-privacy-policy-checkbox-width: $contact-form-privacy-policy-checkbox-height;
@@ -23,6 +27,12 @@ $contact-form-privacy-policy-text-align: justify;
   border: $form-control-border;
   border-radius: 0;
   padding: $form-control-padding-y $form-control-padding-x;
+  color: $form-control-color;
+
+  &:focus{
+    box-shadow: none;
+    border-color: $form-control-focus-border-color;
+  }
 }
 
 input.form-control{

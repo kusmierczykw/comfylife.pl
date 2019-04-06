@@ -1,0 +1,41 @@
+@import "../colors";
+@import "../variables";
+
+$search-form-background: $secondary-color;
+$search-form-box-shadow: 0 0 5px 2px rgba($black-color, 0.1);
+$search-form-submit-button-color: rgba($black-color, 0.7);
+$search-form-submit-button-width: 64px;
+.search-form {
+  // Elementy
+
+  .form-group {
+    position: relative;
+  }
+
+  .form-control {
+    padding-right: $search-form-submit-button-width;
+  }
+
+  // Przyciski
+  .btn {
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  &__submit-button {
+    top: 0;
+    right: 0;
+    padding: 0;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    color: $search-form-submit-button-color;
+    width: $search-form-submit-button-width;
+
+    &:hover {
+      color: $search-form-submit-button-color;
+    }
+  }
+}
