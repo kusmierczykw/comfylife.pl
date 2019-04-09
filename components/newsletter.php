@@ -26,18 +26,42 @@
                         <p>Bądź na bieżąco z naszymi realizacjami</p>
                     </div>
 
-                    <form class="newsletter__form mt-5">
-                        <div class="form-group m-0">
-                            <label for="newsletterEmail" class="form-control-label">Twój email</label>
-                            <input type="email" id="newsletterEmail" class="form-control">
-                        </div>
 
-                        <div class="form-group m-0 mt-3">
-                            <label for="newsletterName" class="form-control-label">Twoje imię</label>
-                            <input type="text" id="newsletterName" class="form-control">
-                        </div>
+                    <form action="https://comfy-life.us20.list-manage.com/subscribe/post?u=cc97d06eeed9ba40763978ddd&amp;id=16b65637e8"
+                          method="post"
+                          id="mc-embedded-subscribe-form"
+                          name="mc-embedded-subscribe-form"
+                          class="validate newsletter__form mt-5"
+                          target="_blank"
+                          novalidate>
+                        <div id="mc_embed_signup_scroll">
+                            <div class="form-group m-0">
+                                <label for="mce-LNAME" class="form-control-label">Twój email</label>
+                                <input type="text"
+                                       value=""
+                                       placeholder="Imię i nazwisko"
+                                       name="LNAME" class="form-control required" id="mce-LNAME"/>
+                            </div>
 
-                        <button type="submit" class="btn btn-primary form-control-lg ml-auto mt-4">Zapisz się</button>
+                            <div class="form-group m-0 mt-3">
+                                <label for="mce-EMAIL" class="form-control-label">Twoje imię</label>
+                                <input type="email" value=""
+                                       placeholder="Adres e-mail"
+                                       name="EMAIL" class="form-control mt-3 mt-lg-0 required email" id="mce-EMAIL"/>
+                            </div>
+
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                <input type="text"
+                                       name="b_cc97d06eeed9ba40763978ddd_16b65637e8"
+                                       tabindex="-1" value=""/>
+                            </div>
+
+                            <input type="submit"
+                                   id="mc-embedded-subscribe"
+                                   value="Zapisz się"
+                                   name="subscribe"
+                                   class="button btn btn-primary form-control-lg ml-auto mt-4">
+                        </div>
                     </form>
                 </div>
             </div>

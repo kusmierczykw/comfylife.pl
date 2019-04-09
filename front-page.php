@@ -7,7 +7,7 @@
  */
 ?>
 <?php get_template_part('layout/header'); ?>
-<section class="container-fluid">
+<section class="container-fluid" id="strona-glowna">
     <div class="row">
         <div class="col-xl-12 p-0">
             <?php get_template_part('components/visualizations-slider') ?>
@@ -21,11 +21,12 @@
             <!-- Skecja z krótkim opisem -->
             <div class="about-us__description">
                 <p>
-                    Jesteśmy absolwentkami Wydziału Architektury na Politechnice Lubelskiej i to właśnie tam
-                    rozpoczęła się nasza przyjaźń.<br/>
-                    To dzięki niej idealnie się uzupełniamy, a nasza wspólna pasja stała się sposobem na życie.
-                    Jesteśmy zespołem, który skupia się na realizacji indywidualnych potrzeb, tworząć komfortowe i
-                    niepowtarzalne wnętrza.
+                    <?php
+                    $value = get_field('about-us-section');
+                    if ($value) {
+                        echo $value;
+                    }
+                    ?>
                 </p>
             </div>
         </div>
@@ -63,8 +64,12 @@
         <div class="col-xl-12 pt-5">
             <div class="offer__description">
                 <p>
-                    Aby sprostać oczekiwaniom naszych klientów, przygotowałyśmy 3 pakiety naszych usług, ale jeśli
-                    oczekujesz czegoś innego, to nie ma problemu - przygotujemy dla Ciebie ofertę indywidualną.
+                    <?php
+                    $value = get_field('offer-section');
+                    if ($value) {
+                        echo $value;
+                    }
+                    ?>
                 </p>
             </div>
         </div>
@@ -75,7 +80,7 @@
     </div>
 </section>
 
-<section class="container">
+<section class="container" id="portfolio">
     <div class="row pt-5">
         <div class="col-xl-12 pt-5">
             <?php get_template_part('components/realizations'); ?>
@@ -90,7 +95,7 @@
 </section>
 
 <section class="container">
-    <div class="row">
+    <div class="row py-5">
         <div class="col-xl-12">
             <hr/>
         </div>
@@ -100,27 +105,64 @@
     </div>
 </section>
 
-<section class="container short-contact">
-    <div class="row">
-        <div class="col-xl-12">
-            <hr/>
-        </div>
-        <div class="col-xl-12">
-            <?php get_template_part('components/short-contact-info'); ?>
+<section class="container-fluid contact-section" id="kontakt">
+    <div class="container h-100 px-0">
+        <div class="row align-items-center h-100 py-5 p-lg-5">
+            <div class="col-lg-6 contact-form order-2 order-lg-0 py-5">
+                <?php echo do_shortcode('[contact-form-7 id="58" title="Kontakt - zakładka" html_class="contact-form__container"]') ?>
+            </div>
+
+            <div class="col-lg-5 offset-lg-1 contact-info order-1 pt-5 py-lg-5">
+                <address class="p-3">
+                    <div class="contact-info__item">
+                        <i class="fa fa-phone"></i>721-049-249 (Agata)
+                    </div>
+
+                    <div class="contact-info__item">
+                        <i class="fa fa-phone"></i>512-574-089 (Zuzanna)
+                    </div>
+
+                    <div class="contact-info__item">
+                        <i class="far fa-envelope-open"></i>
+                        <a href="mailto:kontakt@comfy-life.pl"
+                           target="_blank">kontakt@comfy-life.pl</a></div>
+
+                    <div class="contact-info__item">
+                        <i class="fab fa-facebook"></i>
+                        <a href="https://www.facebook.com/comfylifedesign/"
+                           target="_blank">comfylifedesign</a></div>
+
+                    <div class="contact-info__item">
+                        <i class="fab fa-instagram"></i>
+                        <a href="https://www.instagram.com/comfylife_design/"
+                           target="_blank">comfylife_design</a></div>
+                </address>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="container short-contact-form">
-    <div class="row">
-        <div class="col-xl-12">
-            <hr/>
-        </div>
-        <div class="col-xl-12 pb-5">
-            <?php get_template_part('components/short-contact-form'); ?>
-        </div>
-    </div>
-</section>
+<!--<section class="container short-contact">-->
+<!--    <div class="row">-->
+<!--        <div class="col-xl-12">-->
+<!--            <hr/>-->
+<!--        </div>-->
+<!--        <div class="col-xl-12">-->
+<!--            --><?php //get_template_part('components/short-contact-info'); ?>
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
 
-<?php //get_template_part('components/newsletter'); ?>
-<?php get_template_part('layout/footer'); ?>
+<!--<section class="container short-contact-form" id="kontakt">-->
+<!--    <div class="row">-->
+<!--        <div class="col-xl-12">-->
+<!--            <hr/>-->
+<!--        </div>-->
+<!--        <div class="col-xl-12 pb-5">-->
+<!--            --><?php //get_template_part('components/short-contact-form'); ?>
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+
+<?php get_template_part('components/newsletter'); ?>
+<?php get_template_part('layout/footer-contact'); ?>

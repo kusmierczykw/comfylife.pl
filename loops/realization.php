@@ -24,7 +24,16 @@ $query = new WP_Query($args);
 
             if ($gallery):
                 foreach ($gallery as $attachment) :
-                    array_push($photos, $attachment->url);
+
+                    list($width, $height) = getimagesize($attachment->url);
+
+                    $photo = array(
+                        'url' => $attachment->url,
+                        'width' => $width,
+                        'height' => $height,
+                    );
+
+                    array_push($photos, $photo);
                 endforeach;
             endif; ?>
 
@@ -62,6 +71,7 @@ $query = new WP_Query($args);
             ?>
         </div>
     <?php endif; ?>
+    <?php wp_reset_query(); ?>
 </div>
 
 <?php get_template_part('plugins/photoswipe') ?>

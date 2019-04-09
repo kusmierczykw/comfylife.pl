@@ -156,7 +156,7 @@ $contact-form-item-font-size: 30px;
   margin: 0;
   background: url(../images/contact.jpg) bottom center fixed;
   background-size: cover;
-  min-height: $contact-form-height;
+  //min-height: $contact-form-height;
 
   .contact-info {
     &__item {

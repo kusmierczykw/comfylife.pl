@@ -10,12 +10,19 @@ items.forEach((element) => {
 
         dataAttributes.forEach((element) => {
             const photoObject = {};
-            photoObject['src'] = element;
-            photoObject['w'] = 1135;
-            photoObject['h'] = 825;
+            photoObject['src'] = element.url;
+            photoObject['w'] = element.width;
+            photoObject['h'] = element.height;
 
             photos.push(photoObject);
         });
+
+        var options = {
+            index: 0,
+            showHideOpacity: true,
+            closeOnScroll: false,
+            history: false
+        };
 
 
         if (photos.length !== 0) {

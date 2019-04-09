@@ -30,6 +30,7 @@
         endwhile;
     endif;
     ?>
+    <?php wp_reset_query(); ?>
 </div>
 
 <script>

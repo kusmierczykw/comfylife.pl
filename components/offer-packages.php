@@ -8,81 +8,56 @@
 ?>
 <div class="offer__packages" id="offer-packages">
     <div class="offer__packages-view">
-        <div class="offer__package-item active"
-             data-background-url="<?php echo get_template_directory_uri(); ?>/images/offer/background.jpg"
-             data-link="#pakiet-podstawowy">
-            <div class="offer__package-item-wrapper">
-                <h3 class="text-center text-uppercase font-weight-bold mb-5">Pakiet podstawowy</h3>
-                <div>
-                    <ul>
-                        <li>wykonanie inwentaryzacji projektowej przestrzeni</li>
-                        <li>wykonanie dwóch układów funkcjonalnych 2D</li>
-                        <li>opracowanie wybranego układu funkcjonalnego</li>
-                        <li>wykonanie wizualizacji 3D</li>
-                        <li>stworzenie projektu wykonawczego</li>
-                        <li>zestawienie wybranego wyposażenia</li>
-                    </ul>
+
+
+        <?php $args = array(
+            'post_type' => 'comfy-offer',
+            'posts_per_page' => -1,
+        );
+        $query = new WP_Query($args);
+        ?>
+        <?php if ($query->have_posts()):
+            $postsTitle = array();
+            $counter = 0;
+            $isActive = false;
+
+            while ($query->have_posts()): $query->the_post();
+                $isActive = $counter === 0 ? true : false;
+                $backgroundURL = get_the_post_thumbnail_url();
+
+                if (!$backgroundURL) {
+                    $backgroundURL = get_template_directory_uri() . '/images/offer/background.jpg';
+                }
+
+                ?>
+                <div class="offer__package-item <?php echo ($isActive) ? 'active' : '' ?>"
+                     data-background-url="<?php echo $backgroundURL; ?>"
+                     data-link="#<?php echo link_from_title(get_the_title()) ?>">
+                    <div class="offer__package-item-wrapper">
+                        <h3 class="text-center text-uppercase font-weight-bold mb-5"><?php echo get_the_title(); ?></h3>
+                        <div>
+                            <?php echo get_the_content(); ?>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+                <?php
 
-        <div class="offer__package-item"
-             data-background-url="<?php echo get_template_directory_uri(); ?>/images/offer/background.jpg"
-             data-link="#pakiet-kompleksowy">
-
-            <div class="offer__package-item-wrapper">
-                <h3 class="text-center text-uppercase font-weight-bold mb-5">Pakiet kompleksowy</h3>
-                <div>
-                    <ul>
-                        <li>wykonanie inwentaryzacji projektowej przestrzeni</li>
-                        <li>wykonanie dwóch układów funkcjonalnych 2D</li>
-                        <li>opracowanie wybranego układu funkcjonalnego</li>
-                        <li>wykonanie wizualizacji 3D</li>
-                        <li>stworzenie projektu wykonawczego</li>
-                        <li>zestawienie wybranego wyposażenia</li>
-                        <li>opracowanie kosztorysu</li>
-                        <li>doradztwo w zakupach branżowych</li>
-                        <li>3 wizyty na budowie</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="offer__package-item"
-             data-background-url="<?php echo get_template_directory_uri(); ?>/images/offer/background.jpg"
-             data-link="#pakiet-po-klucz">
-
-            <div class="offer__package-item-wrapper">
-                <h3 class="text-center text-uppercase font-weight-bold mb-5">Pakiet po klucz</h3>
-                <div>
-                    <ul>
-                        <li>wykonanie inwentaryzacji projektowej przestrzeni</li>
-                        <li>wykonanie dwóch układów funkcjonalnych 2D</li>
-                        <li>opracowanie wybranego układu funkcjonalnego</li>
-                        <li>wykonanie wizualizacji 3D</li>
-                        <li>stworzenie projektu wykonawczego</li>
-                        <li>zestawienie wybranego wyposażenia</li>
-                        <li>opracowanie kosztorysu</li>
-                        <li>wspólne zakupy w sklepach branżowych</li>
-                        <li>nadzór nad wszystkimi zamówieniami</li>
-                        <li>nadzór nad pracami wykończeniowymi</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+                array_push($postsTitle, get_the_title());
+                $counter++;
+            endwhile;
+        endif;
+        ?>
+        <?php wp_reset_query(); ?>
     </div>
+
     <div class="offer__packages-switcher" id="offer-packages-switcher">
-        <button type="button" class="switcher-item" dataUrl="#pakiet-podstawowy">
-            pakiet podstawowy
-        </button>
-
-        <button type="button" class="switcher-item" dataUrl="#pakiet-kompleksowy">
-            pakiet kompleksowy
-        </button>
-
-        <button type="button" class="switcher-item" dataUrl="#pakiet-po-klucz">
-            pakiet po klucz
-        </button>
+        <?php
+        foreach ($postsTitle as $title): ?>
+            <button type="button" class="switcher-item" dataUrl="#<?php echo link_from_title($title) ?>">
+                <?php echo strtolower($title); ?>
+            </button>
+        <?php endforeach;
+        ?>
     </div>
 </div>
 

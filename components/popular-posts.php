@@ -20,7 +20,6 @@
     <?php if ($query->have_posts()) : ?>
         <?php $counter = 0; ?>
 
-
         <ul class="popular-post__list">
             <?php while ($query->have_posts()) : $query->the_post(); ?>
                 <?php $counter++; ?>
@@ -35,4 +34,5 @@
     <?php else: ?>
         <p>Brak postów do wyświetlenia. . .</p>
     <?php endif; ?>
+    <?php wp_reset_query(); ?>
 </div>

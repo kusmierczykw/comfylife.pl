@@ -27,9 +27,8 @@ $query = new WP_Query($args);
             </div>
         </div>
     <?php endwhile; ?>
-    <?php else: ?>
-        <p>Brak postów do wyświetlenia. . .</p>
     <?php endif; ?>
+    <?php wp_reset_query(); ?>
 </div>
 
 

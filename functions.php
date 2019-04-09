@@ -37,7 +37,7 @@ if (!file_exists(get_template_directory() . '/class-wp-bootstrap-navwalker.php')
 function create_post_type()
 {
     $comfy_realization_supports = array(
-        'title', 'editor', 'thumbnail',
+        'title', 'thumbnail',
     );
 
     $comfy_realization_post_type_labels = array(
@@ -116,6 +116,26 @@ function create_post_type()
         'menu_name' => __('Wizualizacje')
     );
 
+    $comfy_offer_supports = array(
+        'title', 'editor', 'thumbnail',
+    );
+
+    $comfy_offer_post_type_labels = array(
+        'name' => __('Oferta'),
+        'singular_name' => __('Oferta'),
+        'add_new' => __('Dodaj nową oferę'),
+        'add_new_item' => __('Dodaj nową ofertę'),
+        'edit_item' => __('Edytuj ofertę'),
+        'new_item' => __('Nowa oferta'),
+        'all_items' => __('Wszystkie oferty'),
+        'view_item' => __('Przeglądaj ofertę'),
+        'search_items' => __('Wyszukaj ofertę'),
+        'not_found' => __('Brak wyników...'),
+        'not_found_in_trash' => __('Brak wyników.'),
+        'parent_item_colon' => '',
+        'menu_name' => __('Oferta')
+    );
+
     register_post_type('comfy-realization',
         array(
             'labels' => $comfy_realization_post_type_labels,
@@ -155,6 +175,16 @@ function create_post_type()
             'supports' => $comfy_visualization_supports,
         )
     );
+
+    register_post_type('comfy-offer',
+        array(
+            'labels' => $comfy_offer_post_type_labels,
+            'public' => true,
+            'menu_icon' => 'dashicons-products',
+            'has_archive' => true,
+            'supports' => $comfy_offer_supports,
+        )
+    );
 }
 
 // --------------------------------------------
@@ -192,24 +222,62 @@ function register_navbar_menu()
 
 function load_posts_by_ajax_callback()
 {
+    global $wp_query;
+
     $loopFile = $_POST['loop_file'];
     $paged = $_POST['page_no'];
     $action = $_POST['what'];
     $value = $_POST['value'];
+    $postType = is_null($_POST['post_type']) ? 'post' : $_POST['post_type'];
 
-    if ($action == 'author_name') {
-        $arg = array('author_name' => $value, 'paged' => $paged, 'post_status' => 'publish');
-    } elseif ($action == 'category_name') {
-        $arg = array('category_name' => $value, 'paged' => $paged, 'post_status' => 'publish');
-    } elseif ($action == 'search') {
-        $arg = array('s' => $value, 'paged' => $paged, 'post_status' => 'publish');
-    } else {
-        $arg = array('paged' => $paged, 'post_status' => 'publish');
-    }
+    switch ($action):
+        case 'author_name' :
+            $arg = array(
+                'author_name' => $value,
+                'paged' => $paged,
+                'post_status' => 'publish',
+                'post_type' => $postType
+            );
+            break;
+
+        case 'category_name' :
+            $arg = array(
+                'category_name' => $value,
+                'paged' => $paged,
+                'post_status' => 'publish',
+                'post_type' => $postType
+            );
+            break;
+
+        case 'search' :
+            $arg = array(
+                's' => $value,
+                'paged' => $paged,
+                'post_status' => 'publish',
+                'post_type' => $postType
+            );
+            break;
+
+        default:
+            $arg = array(
+                'paged' => $paged,
+                'post_status' => 'publish',
+                'post_type' => $postType
+            );
+    endswitch;
 
     # Load the posts
     query_posts($arg);
+    ob_start();
     get_template_part($loopFile);
+
+    $data = ob_get_clean();
+    $response = array(
+        'data' => $data,
+        'totalPage' => $wp_query->max_num_pages
+    );
+
+    wp_send_json($response);
     exit;
 }
 
@@ -239,6 +307,12 @@ function pagination_links($query = null)
         }
         echo '</ul>';
     }
+}
+
+function link_from_title($title)
+{
+    $titleAsLowecase = strtolower($title);
+    return str_replace(' ', '-', $titleAsLowecase);
 }
 
 // --------------------------------------------

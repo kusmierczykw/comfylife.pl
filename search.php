@@ -77,10 +77,15 @@
             $.ajax({
                 url: "<?php echo admin_url(); ?>admin-ajax.php",
                 type: 'POST',
-                data: "action=load_posts_by_ajax&page_no=" + pageNumber + '&loop_file=loops/post&what=posts',
-                success: function (html) {
+                data: "action=load_posts_by_ajax&page_no=" + pageNumber + '&loop_file=loops/post&what=search&value=<?php echo get_search_query(); ?>',
+                success: function (response) {
                     $('#inifiniteLoader').fadeOut('fast');
-                    $('.posts').append(html);
+                    $('.posts').append(response.data);
+
+                    const totalPage = response.totalPage;
+                    if(!!totalPage && total !== response.totalPage){
+                        total = totalPage;
+                    }
                 }
             });
             return false;
