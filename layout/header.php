@@ -28,6 +28,17 @@
     <link href="<?php echo get_template_directory_uri(); ?>/css/media-queries.css?v=<?php echo current_time('timestamp', 0); ?>"
           type="text/css" rel="stylesheet"/>
     <?php wp_head(); ?>
+
+    <title><?php echo wp_get_document_title(); ?></title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138059419-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-138059419-1');
+    </script>
 </head>
 
 <body>
@@ -42,10 +53,10 @@
                  class="navbar-brand__logo-inversed"/>
         </a>
 
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+        <button class="navbar-toggler ml-auto p-2 px-3" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <i class="fas fa-bars"></i>
         </button>
         <?php
         wp_nav_menu(array(

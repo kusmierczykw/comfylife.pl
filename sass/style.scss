@@ -117,6 +117,7 @@ $faq-card-icon-padding: 72px;
       &.active {
         .card-header {
           border-color: $faq-active-card-header-border-color;
+
           &__icon {
             color: $faq-active-card-icon-color;
           }
@@ -264,8 +265,6 @@ $post-url-hover-text-color: $black-color;
 $post-image-height: 450px;
 $post-title-text-transform: uppercase;
 .post {
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
-
   &__image {
     height: $post-image-height;
     object-fit: cover;
@@ -274,6 +273,16 @@ $post-title-text-transform: uppercase;
   &__title {
     text-transform: $post-title-text-transform;
     line-height: 1.5;
+    color: $post-url-text-color;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
   }
 
   &__excerpt,

@@ -38,7 +38,7 @@ function initSwitcher(){
 }
 
 function getLinkAttribute(element) {
-    return element.getAttribute('dataUrl');
+    return element.getAttribute('data-url');
 }
 
 function switchElement(hrefLink) {

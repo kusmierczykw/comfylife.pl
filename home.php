@@ -37,7 +37,7 @@
     <div class="row py-5">
         <div class="col-xl-8 offset-xl-1">
             <div class="row">
-                <div class="col-xl-8 col-md-12 mx-auto">
+                <div class="col-12 mx-auto">
                     <div class=" posts">
                         <?php get_template_part('loops/post'); ?>
                     </div>

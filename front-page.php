@@ -32,8 +32,8 @@
         </div>
     </div>
 
-    <div class="row about-us pt-5">
-        <div class="col-xl-12 pt-5">
+    <div class="row about-us pt-5 pb-5`">
+        <div class="col-xl-12 pt-5 pb-4">
             <!-- Sekcja ze zdjęciami oraz podpisami -->
             <div class="row about-us__photos align-items-start">
                 <div class="col-xl col-lg-3 col-sm-6 about-us__single-photo">
@@ -52,16 +52,20 @@
             </div>
         </div>
     </div>
-    <div class="row opinion">
-        <div class="col-xl-10 col-lg-12 offset-xl-1 pt-5">
+    <div class="row opinion pt-5 pb-5">
+        <div class="col-md-12 pt-5 text-center">
+            <h2> Zobacz co mówią o nas klienci:</h2>
+        </div>
+
+        <div class="col-xl-10 col-lg-12 offset-xl-1 pt-5 pb-4">
             <?php get_template_part('components/opinion-carousel'); ?>
         </div>
     </div>
 </section>
 
 <section class="container" id="oferta">
-    <div class="row offer pt-5">
-        <div class="col-xl-12 pt-5">
+    <div class="row offer pt-5 pb-5">
+        <div class="col-xl-12 pt-5 pb-5">
             <div class="offer__description">
                 <p>
                     <?php
@@ -86,7 +90,7 @@
             <?php get_template_part('components/realizations'); ?>
         </div>
 
-        <div class="col-xl-4 col-lg-6 ml-auto pt-2 pb-5">
+        <div class="col-xl-4 col-lg-6 ml-auto pt-2">
             <a href="<?php echo get_site_url(); ?>/portfolio" class="btn btn-primary py-3 text-uppercase w-100">
                 Zobacz więcej realizacji
             </a>

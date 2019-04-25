@@ -8,7 +8,7 @@
 ?>
 <div class="row align-items-center">
     <div class="col-md-12">
-        <h2>Zapisz się do newslettera</h2>
+        <h2>Pobierz przykładowy projekt</h2>
     </div>
     <div class="col-md-12 mt-3">
         <form action="https://comfy-life.us20.list-manage.com/subscribe/post?u=cc97d06eeed9ba40763978ddd&amp;id=16b65637e8"

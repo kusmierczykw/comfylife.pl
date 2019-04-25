@@ -11,7 +11,7 @@ $offer-package-switcher-item-first-background: $primary-color-light;
 $offer-package-switcher-item-second-background: $primary-color;
 $offer-package-switcher-item-third-background: $primary-color-dark;
 
-$offer-package-item-background-color: $primary-color-dark;
+$offer-package-item-background-color: $black-color;
 $offer-package-item-width: 700px;
 $offer-package-item-height: 560px;
 $offer-package-item-text-color: $white-color;
@@ -50,7 +50,7 @@ $offer-package-item-padding: 40px;
       left: 0;
       width: 100%;
       height: 100%;
-      opacity: 0.8;
+      opacity: 0.5;
       background: $offer-package-item-background-color;
     }
 
@@ -103,6 +103,21 @@ $offer-package-item-padding: 40px;
 
       &:nth-of-type(3) {
         background: $offer-package-switcher-item-third-background;
+      }
+    }
+  }
+
+  @media screen and (max-width: $grid-breakpoint-lg) {
+    &__package-item {
+      display: block !important;
+      font-size: 12px;
+      padding: 1em;
+      margin-bottom: 1em;
+
+      &-wrapper {
+        border: 0;
+        padding: 1em;
+        min-height: auto;
       }
     }
   }

@@ -1,6 +1,11 @@
+@import "../colors";
+
 $visualization-slider-item-height: 100vh;
 $visualization-slider-item-mask-background: rgba(0, 0, 0, .1);
 $visualization-slider-owl-dots-bottom-position: 40px;
+$visualization-slider-title-text-color: $white-color;
+$visualization-slider-title-font-size: 48px;
+$visualization-slider-title-text-transform: uppercase;
 .visualization-slider {
   &__item {
     height: $visualization-slider-item-height;
@@ -21,6 +26,16 @@ $visualization-slider-owl-dots-bottom-position: 40px;
       height: 100%;
       object-fit: cover;
     }
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 20%;
+    width: 100%;
+    z-index: 100;
+    font-weight: lighter;
+    color: $visualization-slider-title-text-color;
+    text-transform: $visualization-slider-title-text-transform;
   }
 
   .owl-dots {

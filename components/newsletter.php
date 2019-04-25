@@ -23,7 +23,7 @@
                 <div class="newsletter__content">
                     <div class="newsletter__label">
                         <h2>Zapisz się do newslettera</h2>
-                        <p>Bądź na bieżąco z naszymi realizacjami</p>
+                        <p>Zobacz jak wygląda przykładowa dokumentacja projektowa</p>
                     </div>
 
 

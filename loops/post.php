@@ -9,21 +9,25 @@
 
 <?php if (have_posts()) : while (have_posts()) :
     the_post(); ?>
-    <div class="card mb-5 post">
-        <div class="row no-gutters">
-            <div class="col-md-12">
+    <div class="card post">
+        <div class="row align-items-center no-gutters">
+            <div class="col-lg-12 col-xl-5">
                 <?php if (!!get_the_post_thumbnail_url(null, 'large')): ?>
-                    <img src="<?php echo get_the_post_thumbnail_url(null, 'large') ?>" class="card-img post__image"
-                         alt="<?php echo get_the_title(); ?>">
+                    <a href="<?php echo get_permalink(); ?>">
+                        <img src="<?php echo get_the_post_thumbnail_url(null, 'large') ?>" class="card-img post__image"
+                             alt="<?php echo get_the_title(); ?>">
+                    </a>
                 <?php endif; ?>
             </div>
 
-            <div class="col-md-12">
+            <div class="col-lg-12 col-xl-7">
                 <div class="card-body">
                     <h5 class="card-title">
-                    <span class="post__title">
-                        <?php echo get_the_title(); ?>
-                    </span>
+                        <span class="post__title">
+                            <a href="<?php echo get_permalink(); ?>">
+                                <?php echo get_the_title(); ?>
+                            </a>
+                        </span>
                     </h5>
                     <p class="card-text">
                         <small class="text-muted post__date">
@@ -46,6 +50,8 @@
             </div>
         </div>
     </div>
+
+    <hr class="my-5"/>
 <?php endwhile; ?>
 <?php else: ?>
     <p>Brak postów do wyświetlenia. . .</p>
