@@ -1,0 +1,44 @@
+@import "../variables";
+@import "../colors";
+
+$cookies-bar-background: $secondary-color;
+$cookies-bar-padding-y: 8px;
+$cookies-bar-link-text-decoration: underline;
+$cookies-bar-link-font-weight: bold;
+
+$cookies-close-button-text-color: $white-color;
+$cookies-close-button-font-weight: bold;
+$cookies-image-height: 40px;
+
+
+.cookies {
+  bottom: 0;
+  width: 100%;
+  z-index: 101;
+  display: none;
+  position: fixed;
+  padding-top: $cookies-bar-padding-y;
+  padding-bottom: $cookies-bar-padding-y;
+  background-color: $cookies-bar-background;
+
+  a {
+    text-decoration: $cookies-bar-link-text-decoration;
+    font-weight: $cookies-bar-link-font-weight;
+  }
+
+  .cookie__close-button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: $cookies-close-button-text-color;
+    font-weight: $cookies-close-button-font-weight;
+
+    .fa {
+      margin-right: 5px;
+    }
+  }
+
+  img {
+    height: $cookies-image-height;
+  }
+}
