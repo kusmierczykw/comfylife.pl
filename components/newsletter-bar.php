@@ -23,7 +23,7 @@
                     <div class="col-lg-4 d-lg-flex justify-content-lg-end">
                         <input type="text"
                                value=""
-                               placeholder="Imię i nazwisko"
+                               placeholder="Imię"
                                name="LNAME" class="form-control required" id="mce-LNAME"/>
                     </div>
 
@@ -49,9 +49,8 @@
                     </div>
 
                     <div class="col-lg-12 pt-4">
-                        Zapisując się do newslettera wyrażasz zgodę na otrzymywanie od ComfyLife informacji handlowych
-                        drogą elektroniczną zgodnie z ustawą z dnia 18.07.2002 r. (Dz.U. z 2013r., poz. 1422 z późn.
-                        zm.) o świadczeniu usług drogą elektroniczną.
+                        Zapisując się do newslettera akceptujesz
+                        <a href="<?php echo get_site_url(); ?>/polityka-prywatnosci">politykę prwatności</a>.
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@
 $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
 $args = array(
     'post_type' => 'comfy-realization',
-    'posts_per_page' => 6,
+    'posts_per_page' => 9,
     'paged' => $paged,
     'tax_query' => array(
         array(

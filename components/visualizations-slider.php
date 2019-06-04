@@ -35,12 +35,10 @@
     </div>
 
     <div class="visualization-slider__title">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col text-center text-lg-right">
-                    <div class="display-4">Projektowanie wnętrz</div>
-                    <div class="h3">architektura wnętrz</div>
-                    <div class="h3">wzornictwo przemysłowe</div>
+                <div class="offset-xl-1 col-xl-10 text-center text-lg-right">
+                    <div class="display-4 font-weight-bolder">Architektura wnętrz</div>
                 </div>
             </div>
         </div>

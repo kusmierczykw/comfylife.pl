@@ -46,24 +46,25 @@ function smoothScrolling() {
     });
 }
 
-function setCookie(cookieName, cookieValue, cookieExpireDays){
+function setCookie(cookieName, cookieValue, cookieExpireDays) {
     var date = new Date();
 
-    date.setTime(date.getTime() + (cookieExpireDays*24*60*60*1000));
-    var expires = "expires="+date.toUTCString();
-    document.cookie = cookieName+"="+cookieValue+";"+expires+";path=/";
+    date.setTime(date.getTime() + (cookieExpireDays * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
 }
 
-function getCookie(cookieName){
-    var cookieName = cookieName+"=";
-    var decodedCookie = decodeURIComponent(document.cookie);
-    var cookieArray = decodedCookie.split(";");
-    for(var i = 0; i < cookieArray.length; i++){
-        var cookie = cookieArray[i];
-        while(cookie.charAt(0) == ' '){
+function getCookie(name) {
+    const cookieName = name + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const cookieArray = decodedCookie.split(";");
+
+    for (let i = 0; i < cookieArray.length; i++) {
+        let cookie = cookieArray[i];
+        while (cookie.charAt(0) == ' ') {
             cookie = cookie.substring(1);
         }
-        if(cookie.indexOf(cookieName) == 0){
+        if (cookie.indexOf(cookieName) == 0) {
             return cookie.substring(cookieName.length, cookie.length);
         }
     }

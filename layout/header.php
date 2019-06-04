@@ -34,7 +34,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138059419-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'UA-138059419-1');
@@ -59,8 +63,12 @@
             <i class="fas fa-bars"></i>
         </button>
         <?php
+        $theme_location = is_home() ? 'header-blog-menu' : 'header-menu';
+        ?>
+
+        <?php
         wp_nav_menu(array(
-            'theme_location' => 'header-menu',
+            'theme_location' => $theme_location,
             'depth' => 2,
             'container' => 'div',
             'container_class' => 'collapse navbar-collapse',
@@ -81,11 +89,18 @@
             </a>
         </div>
 
-        <div class="navbar-action-section d-none d-lg-block">
-            <a href="#" id="search-button-toggler">
-                <i class="fas fa-search"></i>
-            </a>
-        </div>
+        <?php
+        if (is_home()):
+            ?>
+            <div class="navbar-action-section d-none d-lg-block">
+                <a href="#" id="search-button-toggler">
+                    <i class="fas fa-search"></i>
+                </a>
+            </div>
+        <?php
+        endif;
+
+        ?>
     </div>
 </nav>
 <?php get_template_part('components/search-bar'); ?>

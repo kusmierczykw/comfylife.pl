@@ -14,7 +14,7 @@ add_theme_support('post-thumbnails');
 // --------------------------------------------
 // Register actions
 // --------------------------------------------
-add_action('init', 'register_navbar_menu');
+add_action('init', 'register_navbar_menus');
 add_action('wp_ajax_load_posts_by_ajax', 'load_posts_by_ajax_callback');
 add_action('wp_ajax_nopriv_load_posts_by_ajax', 'load_posts_by_ajax_callback');
 add_action('init', 'create_post_type');
@@ -215,9 +215,10 @@ function create_taxonomy()
 // --------------------------------------------
 // Functions
 // --------------------------------------------
-function register_navbar_menu()
+function register_navbar_menus()
 {
     register_nav_menu('header-menu', 'Menu górne');
+    register_nav_menu('header-blog-menu', 'Menu górne dla bloga');
 }
 
 function load_posts_by_ajax_callback()
@@ -311,8 +312,8 @@ function pagination_links($query = null)
 
 function link_from_title($title)
 {
-    $titleAsLowecase = strtolower($title);
-    return str_replace(' ', '-', $titleAsLowecase);
+    $titleAsLowerCase = strtolower($title);
+    return str_replace(' ', '-', $titleAsLowerCase);
 }
 
 // --------------------------------------------

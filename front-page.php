@@ -36,16 +36,16 @@
         <div class="col-xl-12 pt-5 pb-4">
             <!-- Sekcja ze zdjęciami oraz podpisami -->
             <div class="row about-us__photos align-items-start">
-                <div class="col-xl col-lg-3 col-sm-6 about-us__single-photo">
+                <div class="col-xl col-lg-3 col-sm-6 px-4 about-us__single-photo">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/strona_gotowa_05.jpg"/>
                     <div class="about-us__signature">Zuzanna Kożuch</div>
                 </div>
 
-                <div class="col-xl-5 col-lg-6 about-us__single-photo d-none d-lg-block">
+                <div class="col-xl-5 col-lg-6 px-4 about-us__single-photo d-none d-lg-block">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/strona_gotowa_07.jpg"/>
                 </div>
 
-                <div class="col-xl col-lg-3 col-sm-6 about-us__single-photo">
+                <div class="col-xl col-lg-3 col-sm-6 px-4 about-us__single-photo">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/strona_gotowa_09.jpg"/>
                     <div class="about-us__signature">Agata Jankowska</div>
                 </div>
@@ -123,7 +123,7 @@
                     </div>
 
                     <div class="contact-info__item">
-                        <i class="fa fa-phone"></i>512-574-089 (Zuzanna)
+                        <i class="fa fa-phone"></i>512-574-089 (Zuza)
                     </div>
 
                     <div class="contact-info__item">
@@ -145,28 +145,6 @@
         </div>
     </div>
 </section>
-
-<!--<section class="container short-contact">-->
-<!--    <div class="row">-->
-<!--        <div class="col-xl-12">-->
-<!--            <hr/>-->
-<!--        </div>-->
-<!--        <div class="col-xl-12">-->
-<!--            --><?php //get_template_part('components/short-contact-info'); ?>
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-
-<!--<section class="container short-contact-form" id="kontakt">-->
-<!--    <div class="row">-->
-<!--        <div class="col-xl-12">-->
-<!--            <hr/>-->
-<!--        </div>-->
-<!--        <div class="col-xl-12 pb-5">-->
-<!--            --><?php //get_template_part('components/short-contact-form'); ?>
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
 
 <?php get_template_part('components/newsletter'); ?>
 <?php get_template_part('layout/footer-contact'); ?>

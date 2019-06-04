@@ -18,11 +18,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 page-title__header">
-                    <h1>Blog</h1>
-                    <hr class="page-title__separator"/>
-                    <p>
-                        Historie, przemyślenia na temat projektowania wnętrz i nie tylko
-                    </p>
+                    <!--                    <h1>Blog</h1>-->
+                    <!--                    <hr class="page-title__separator"/>-->
+                    <!--                    <p>-->
+                    <!--                        Historie, przemyślenia na temat projektowania wnętrz i nie tylko-->
+                    <!--                    </p>-->
                 </div>
             </div>
         </div>
@@ -93,7 +93,7 @@
                     $('.posts').append(response.data);
 
                     const totalPage = response.totalPage;
-                    if(!!totalPage && total !== response.totalPage){
+                    if (!!totalPage && total !== response.totalPage) {
                         total = totalPage;
                     }
                 }

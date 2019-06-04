@@ -38,9 +38,6 @@ $offer-package-item-padding: 40px;
       color: $offer-package-item-text-color;
       min-height: $offer-package-item-height;
       width: 100%;
-
-      //TODO usunąć parametry poniżej i dać możliwość osadzenia parametrów w Wordpress
-      font-size: $font-size-xl;
     }
 
     &:after {

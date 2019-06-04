@@ -36,15 +36,15 @@
                           novalidate>
                         <div id="mc_embed_signup_scroll">
                             <div class="form-group m-0">
-                                <label for="mce-LNAME" class="form-control-label">Twój email</label>
+                                <label for="mce-LNAME" class="form-control-label">Twoje imię</label>
                                 <input type="text"
                                        value=""
-                                       placeholder="Imię i nazwisko"
+                                       placeholder="Imię"
                                        name="LNAME" class="form-control required" id="mce-LNAME"/>
                             </div>
 
                             <div class="form-group m-0 mt-3">
-                                <label for="mce-EMAIL" class="form-control-label">Twoje imię</label>
+                                <label for="mce-EMAIL" class="form-control-label">Twój e-mail</label>
                                 <input type="email" value=""
                                        placeholder="Adres e-mail"
                                        name="EMAIL" class="form-control mt-3 mt-lg-0 required email" id="mce-EMAIL"/>
@@ -54,6 +54,11 @@
                                 <input type="text"
                                        name="b_cc97d06eeed9ba40763978ddd_16b65637e8"
                                        tabindex="-1" value=""/>
+                            </div>
+
+                            <div class="mt-3">
+                                Zapisując się do newslettera akceptujesz
+                                <a href="<?php echo get_site_url(); ?>/polityka-prywatnosci">politykę prwatności</a>.
                             </div>
 
                             <input type="submit"
