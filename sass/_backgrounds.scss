@@ -1,0 +1,33 @@
+@import "colors";
+
+.bg {
+  // ---------------------------------
+  // PRIMARY COLOR
+  // ---------------------------------
+  &-primary {
+    background: $primary-color !important;
+
+    &-dark {
+      background: $primary-color-dark !important;
+    }
+
+    &-light {
+      background: $primary-color-light !important;
+    }
+  }
+
+  // ---------------------------------
+  // SECONDARY COLOR
+  // ---------------------------------
+  &-secondary {
+    background: $secondary-color !important;
+
+    &-dark {
+      background: $secondary-color-dark !important;
+    }
+
+    &-light {
+      background: $secondary-color-light !important;
+    }
+  }
+}

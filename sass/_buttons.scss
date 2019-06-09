@@ -1,9 +1,6 @@
 @import "colors";
 
-$primary-button-background: $primary-color-dark;
-$primary-button-hover-background: $primary-color;
-$primary-button-focus-background: $primary-color;
-$primary-button-text-color: $white-color;
+
 .btn {
   border-radius: 0;
   border: 0;
@@ -11,6 +8,10 @@ $primary-button-text-color: $white-color;
   padding-right: 2em;
   line-height: 1;
 
+  $primary-button-background: $primary-color-dark;
+  $primary-button-hover-background: $primary-color;
+  $primary-button-focus-background: $primary-color;
+  $primary-button-text-color: $white-color;
   &.btn-primary {
     background-color: $primary-button-background;
     color: $primary-button-text-color;
@@ -23,6 +24,26 @@ $primary-button-text-color: $white-color;
       &:focus,
       &:active {
         background-color: $primary-button-focus-background;
+      }
+    }
+  }
+
+  $secondary-button-background: $secondary-color-dark;
+  $secondary-button-hover-background: rgba($secondary-color-dark, .8);
+  $secondary-button-focus-background: rgba($secondary-color-dark, .8);
+  $secondary-button-text-color: $white-color;
+  &.btn-secondary {
+    background-color: $secondary-button-background;
+    color: $secondary-button-text-color;
+
+    &:not(:disabled):not(.disabled) {
+      &:hover {
+        background-color: $secondary-button-hover-background;
+      }
+
+      &:focus,
+      &:active {
+        background-color: $secondary-button-focus-background;
       }
     }
   }

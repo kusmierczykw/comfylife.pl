@@ -35,19 +35,19 @@
                           target="_blank"
                           novalidate>
                         <div id="mc_embed_signup_scroll">
+                            <div class="form-group m-0 mt-3">
+                                <label for="mce-EMAIL" class="form-control-label">Twój e-mail</label>
+                                <input type="email" value=""
+                                       placeholder="Adres e-mail"
+                                       name="EMAIL" class="form-control mt-3 mt-lg-0 required email" id="mce-EMAIL"/>
+                            </div>
+
                             <div class="form-group m-0">
                                 <label for="mce-LNAME" class="form-control-label">Twoje imię</label>
                                 <input type="text"
                                        value=""
                                        placeholder="Imię"
                                        name="LNAME" class="form-control required" id="mce-LNAME"/>
-                            </div>
-
-                            <div class="form-group m-0 mt-3">
-                                <label for="mce-EMAIL" class="form-control-label">Twój e-mail</label>
-                                <input type="email" value=""
-                                       placeholder="Adres e-mail"
-                                       name="EMAIL" class="form-control mt-3 mt-lg-0 required email" id="mce-EMAIL"/>
                             </div>
 
                             <div style="position: absolute; left: -5000px;" aria-hidden="true">
@@ -58,7 +58,7 @@
 
                             <div class="mt-3">
                                 Zapisując się do newslettera akceptujesz
-                                <a href="<?php echo get_site_url(); ?>/polityka-prywatnosci">politykę prwatności</a>.
+                                <a href="<?php echo get_site_url(); ?>/polityka-prywatnosci">politykę prywatności</a>.
                             </div>
 
                             <input type="submit"

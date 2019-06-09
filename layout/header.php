@@ -63,7 +63,7 @@
             <i class="fas fa-bars"></i>
         </button>
         <?php
-        $theme_location = is_home() ? 'header-blog-menu' : 'header-menu';
+        $theme_location = is_front_page() ? 'header-menu' : 'header-blog-menu';
         ?>
 
         <?php

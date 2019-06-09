@@ -13,9 +13,11 @@
     </div>
 
     <div class="sample-realization-download__content">
-        <p class="py-3 sample-realization-download__label">Zapisz się do newslettera i pobierz przykładową <a href="<?php echo get_site_url(); ?>/portfolio" class="sample-realization-download__label-link">realizację.</a></p>
-        <div class="text-left">
-            <a href="<?php echo get_site_url(); ?>/portfolio" class="btn btn-secondary py-3 text-uppercase">
+        <p class="py-3 sample-realization-download__label">Zapisz się do newslettera i pobierz przykładową
+            realizację.</p>
+        <div class="text-center">
+            <a href="https://mailchi.mp/d1b4cf5944ae/comfy-life" target="_blank"
+               class="btn btn-secondary py-3 text-uppercase">
                 Pobierz teraz
             </a>
         </div>

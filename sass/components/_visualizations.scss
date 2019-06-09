@@ -1,10 +1,12 @@
 @import "../colors";
+@import "../variables";
 
 $visualization-slider-item-height: 100vh;
 $visualization-slider-item-mask-background: rgba(0, 0, 0, .1);
 $visualization-slider-owl-dots-bottom-position: 40px;
 $visualization-slider-title-text-color: $white-color;
-$visualization-slider-title-font-size: 48px;
+$visualization-slider-title-font-size: 60px;
+$visualization-slider-title-mobile-font-size: 30px;
 $visualization-slider-title-text-transform: uppercase;
 .visualization-slider {
   &__item {
@@ -36,6 +38,7 @@ $visualization-slider-title-text-transform: uppercase;
     font-weight: lighter;
     color: $visualization-slider-title-text-color;
     text-transform: $visualization-slider-title-text-transform;
+    font-size: $visualization-slider-title-font-size;
   }
 
   .owl-dots {
@@ -43,5 +46,11 @@ $visualization-slider-title-text-transform: uppercase;
     transform: translateX(-50%);
     position: absolute;
     bottom: $visualization-slider-owl-dots-bottom-position !important;
+  }
+
+  @media(max-width: $grid-breakpoint-md) {
+    &__title {
+      font-size: $visualization-slider-title-mobile-font-size;
+    }
   }
 }

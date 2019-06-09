@@ -10,11 +10,10 @@ $cookies-close-button-text-color: $white-color;
 $cookies-close-button-font-weight: bold;
 $cookies-image-height: 40px;
 
-
 .cookies {
   bottom: 0;
   width: 100%;
-  z-index: 101;
+  z-index: 10001;
   display: none;
   position: fixed;
   padding-top: $cookies-bar-padding-y;

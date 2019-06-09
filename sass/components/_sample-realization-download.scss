@@ -1,13 +1,14 @@
 @import "../variables";
 @import "../colors";
 
-$sample-realization-download-mask-background: rgba($black-color, 0.3);
+//$sample-realization-download-mask-background: rgba($black-color, 0.3);
+$sample-realization-download-mask-background: rgba($secondary-color-light, 1);
 $sample-realization-download-box-shadow: rgba($black-color, 0.3);
-$sample-realization-download-color: $white-color;
+$sample-realization-download-color: $black-color;
 $sample-realization-download-line-height: 1.4;
 
-$sample-realization-download__label-link-color: $white-color;
-$sample-realization-download__label-link-hover-color: $white-color;
+$sample-realization-download__label-link-color: $black-color;
+$sample-realization-download__label-link-hover-color: $black-color;
 $sample-realization-download__content-font-size: 28px;
 
 .sample-realization-download {

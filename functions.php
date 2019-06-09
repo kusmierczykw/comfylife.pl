@@ -200,6 +200,14 @@ function create_taxonomy()
         'view_item' => __('Podgląd kategorię'),
     );
 
+    $comfy_faq_category_labels = array(
+        'name' => __('Kategorie'),
+        'add_new_item' => __('Dodaj nową kategorię'),
+        'not_found' => __('Brak wyników.'),
+        'edit_item' => __('Edytuj kategorię'),
+        'view_item' => __('Podgląd kategorię'),
+    );
+
     register_taxonomy(
         'comfy-realization-category',
         'comfy-realization',
@@ -209,7 +217,19 @@ function create_taxonomy()
             'hierarchical' => true,
         )
     );
+
+    register_taxonomy(
+        'comfy-faq-category',
+        'comfy-faq',
+        array(
+            'labels' => $comfy_faq_category_labels,
+            'rewrite' => array('slug' => 'comfy-realization-category'),
+            'hierarchical' => true,
+        )
+    );
+
     register_taxonomy_for_object_type('comfy-realization-category', 'comfy-realization');
+    register_taxonomy_for_object_type('comfy-faq-category', 'comfy-faq');
 }
 
 // --------------------------------------------

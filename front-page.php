@@ -37,16 +37,18 @@
             <!-- Sekcja ze zdjęciami oraz podpisami -->
             <div class="row about-us__photos align-items-start">
                 <div class="col-xl col-lg-3 col-sm-6 px-4 about-us__single-photo">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/strona_gotowa_05.jpg"/>
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/zuzanna_photo.jpg"
+                         alt="Zdjęcie Zuzanna Kożuch"/>
                     <div class="about-us__signature">Zuzanna Kożuch</div>
                 </div>
 
                 <div class="col-xl-5 col-lg-6 px-4 about-us__single-photo d-none d-lg-block">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/strona_gotowa_07.jpg"/>
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/my_photo.jpg"/>
                 </div>
 
                 <div class="col-xl col-lg-3 col-sm-6 px-4 about-us__single-photo">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/strona_gotowa_09.jpg"/>
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/agata_jankowska_photo.jpg"
+                         alt="Zdjęcie Agata Jankowska"/>
                     <div class="about-us__signature">Agata Jankowska</div>
                 </div>
             </div>
@@ -85,7 +87,7 @@
 </section>
 
 <section class="container" id="portfolio">
-    <div class="row pt-5">
+    <div class="row py-5">
         <div class="col-xl-12 pt-5">
             <?php get_template_part('components/realizations'); ?>
         </div>
@@ -94,6 +96,21 @@
             <a href="<?php echo get_site_url(); ?>/portfolio" class="btn btn-primary py-3 text-uppercase w-100">
                 Zobacz więcej realizacji
             </a>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid bg-secondary-light">
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-xl-12">
+                <?php get_template_part('components/faq'); ?>
+            </div>
+            <div class="col-xl-4 col-lg-6 ml-auto pt-2">
+                <a href="<?php echo get_site_url(); ?>/faq" class="btn btn-primary py-3 text-uppercase w-100">
+                    Zobacz więcej
+                </a>
+            </div>
         </div>
     </div>
 </section>

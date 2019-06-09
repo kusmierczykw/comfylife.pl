@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&subset=latin-ext');
 @import url("https://use.fontawesome.com/releases/v5.7.1/css/all.css");
 @import "variables";
+@import "backgrounds";
 @import "colors";
 @import "buttons";
 @import "forms";
@@ -21,6 +22,12 @@ body {
   font-weight: 100;
   min-height: 100vh;
 }
+
+//body {
+//  position: relative;
+//  z-index: 2;
+//}
+
 
 $about-us-description-font-size: $font-size-lg;
 $about-us-description-font-weight: 300;
@@ -153,6 +160,7 @@ $contact-form-container-padding: 32px;
 $contact-form-container-box-shadow: 0 0 5px 2px rgba(0, 0, 0, .1);
 $contact-form-height: 100vh;
 $contact-form-item-font-size: 30px;
+$contact-form-item-mobile-font-size: 20px;
 .contact-section {
   margin: 0;
   background: url(../images/contact.jpg) bottom center fixed;
@@ -174,6 +182,12 @@ $contact-form-item-font-size: 30px;
         margin-left: -4px;
         color: white;
         text-decoration: none;
+      }
+    }
+
+    @media(max-width: $grid-breakpoint-md) {
+      &__item {
+        font-size: $contact-form-item-mobile-font-size;
       }
     }
   }
@@ -317,9 +331,4 @@ $post-title-text-transform: uppercase;
 $search-section-background: $secondary-color;
 .search-section {
   background: $search-section-background;
-}
-
-body {
-  position: relative;
-  z-index: 2;
 }
