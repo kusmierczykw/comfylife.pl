@@ -14,7 +14,7 @@
     "gulp-connect-php": "^1.0.3",
     "gulp-sass": "^4.0.2",
     "jquery": "^3.3.1",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "normalize.css": "^8.0.1",
     "owl.carousel": "^2.3.4",
     "photoswipe": "^4.1.3"
